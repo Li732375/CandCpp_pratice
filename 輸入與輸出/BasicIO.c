@@ -10,8 +10,10 @@ int main()
 	// 決定相鄰位元的擷取長度 
 	printf("*&a = %d\n", *&a); 
 	
-	printf("*(int*)(%d) = %d\n", &a, *(int*)(&a)); // 這裡的 " int* " 才是指標，指標一定要附帶資料型態
-    
+	printf("*(int*)(%d) = %d\n", &a, *(int*) (&a)); // 這裡的 " int* " 才是指標，指標一定要附帶資料型態
+	printf("(int**)(a) = %d\n", (int**)(a));
+	printf("(int**)(%d) = %d\n", &a, (int**)(&a));
+	    
     int b, c;
     printf("\n輸入兩數字 (格至少一空格或一換行皆可):\n");
     printf("以 scanf(\"%%d%%d\", &b, &c) 讀入\n");
