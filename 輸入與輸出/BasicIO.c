@@ -28,7 +28,7 @@ int main()
 	//printf("*(int*)(a) = %d\n", *(int*)(a));
 	printf("*(int*)(%d) = %d\n", &a, *(int*)(&a)); // 這裡的 " int* " 才是指標，指標一定要附帶資料型態
 	printf("(int*)(%d) = %d\n", &a, (int*)(&a));
-	printf("=> 實際上放在變數 a 裡面的內容 = (int*)(%d)\n\n", &a);
+	printf("=> 實際上放在變數 a_addr 裡面的內容 = (int*)(%d)\n\n", &a);
 	printf("(int**)(%d) = %d\n", &a, (int**)(&a));
 	printf("(int***)(%d) = %d\n", &a, (int***)(&a));
 	printf("*(int**)(%d) = %d\n\n", &a, *(int**)(&a));
@@ -44,8 +44,8 @@ int main()
 	unsigned char a_addr_addr_4 = *(unsigned char*)(a_addr_addr + 3);
 	 
 	printf("(最右) a_addr_addr_1 字元為\"%c\" ,數值為 %d\n", a_addr_addr_1, a_addr_addr_1);
-	printf(" a_addr_addr_2 字元為\"%c\" ,數值為 %d\n", a_addr_addr_2, a_addr_addr_2);
-	printf(" a_addr_addr_3 字元為\"%c\" ,數值為 %d\n", a_addr_addr_3, a_addr_addr_3);
+	printf("       a_addr_addr_2 字元為\"%c\" ,數值為 %d\n", a_addr_addr_2, a_addr_addr_2);
+	printf("       a_addr_addr_3 字元為\"%c\" ,數值為 %d\n", a_addr_addr_3, a_addr_addr_3);
 	printf("(最左) a_addr_addr_4 字元為\"%c\" ,數值為 %d\n",a_addr_addr_4, a_addr_addr_4);
 	
 	printf("檢視上述四個字元 (皆 %d byte) 的位元總和應等於 %d (%d byte)\n\n",
