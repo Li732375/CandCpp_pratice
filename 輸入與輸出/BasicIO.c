@@ -11,14 +11,15 @@ int main()
 	printf("*&a = %d\n\n", *&a); 
 	
 	
-	int *a_addr = NULL; // 夹﹍てぃ穝 
+	int *a_addr = NULL; 
 	printf("int *a_addr = NULL;\n");
 	printf("a_addr = %d\n", a_addr);
 	printf("*a_addr = ?	(X)\n\n");
 	
+	printf("璝璶穝砞﹚夹\n");
 	a_addr = &a;
 	printf("*a_addr = &a;	(X)\n");
-	printf("a_addr = &a;	(O)\n\n");
+	printf(" a_addr = &a;	(O)\n\n");
 	
 	printf("a_addr = %d\n", a_addr);
 	printf("*a_addr = %d\n", *a_addr);
@@ -37,15 +38,15 @@ int main()
 	
 	printf("块 a_addr : ");
 	scanf("%d", &a_addr_addr);
-	unsigned char *a_addr_addr_1 = *(unsigned char*)a_addr_addr; // 璝篒奔 "*(unsigned char*)"度穦玂痙 
-	unsigned char *a_addr_addr_2 = *(unsigned char*)(a_addr_addr + 1);
-	unsigned char *a_addr_addr_3 = *(unsigned char*)(a_addr_addr + 2); 
-	unsigned char *a_addr_addr_4 = *(unsigned char*)(a_addr_addr + 3);
+	unsigned char a_addr_addr_1 = *(unsigned char*)a_addr_addr; // 璝篒奔 "*(unsigned char*)"度穦玂痙 
+	unsigned char a_addr_addr_2 = *(unsigned char*)(a_addr_addr + 1);
+	unsigned char a_addr_addr_3 = *(unsigned char*)(a_addr_addr + 2); 
+	unsigned char a_addr_addr_4 = *(unsigned char*)(a_addr_addr + 3);
 	 
-	printf("(程) a_addr_1 じ\"%c\" ,计 %d\n", a_addr_addr_1, a_addr_addr_1);
-	printf(" a_addr_2 じ\"%c\" ,计 %d\n", a_addr_addr_2, a_addr_addr_2);
-	printf(" a_addr_3 じ\"%c\" ,计 %d\n", a_addr_addr_3, a_addr_addr_3);
-	printf("(程オ) a_addr_4 じ\"%c\" ,计 %d\n",a_addr_addr_4, a_addr_addr_4);
+	printf("(程) a_addr_addr_1 じ\"%c\" ,计 %d\n", a_addr_addr_1, a_addr_addr_1);
+	printf(" a_addr_addr_2 じ\"%c\" ,计 %d\n", a_addr_addr_2, a_addr_addr_2);
+	printf(" a_addr_addr_3 じ\"%c\" ,计 %d\n", a_addr_addr_3, a_addr_addr_3);
+	printf("(程オ) a_addr_addr_4 じ\"%c\" ,计 %d\n",a_addr_addr_4, a_addr_addr_4);
 	
 	printf("浪跌瓃じ ( %d byte) じ羆㎝莱单 %d (%d byte)\n\n",
 	 sizeof(a_addr_addr_1), &a, sizeof(a_addr_addr));
@@ -79,10 +80,10 @@ int main()
 	
 	printf("块 a : ");
 	scanf("%d", &d_addr);
-	unsigned char *d_addr_1 = *(unsigned char*)d_addr; // 璝篒奔 "*(unsigned char*)"度穦玂痙 
-	unsigned char *d_addr_2 = *(unsigned char*)(d_addr + 1);
-	unsigned char *d_addr_3 = *(unsigned char*)(d_addr + 2); 
-	unsigned char *d_addr_4 = *(unsigned char*)(d_addr + 3);
+	unsigned char d_addr_1 = *(unsigned char*)d_addr; // 璝篒奔 "*(unsigned char*)"度穦玂痙 
+	unsigned char d_addr_2 = *(unsigned char*)(d_addr + 1);
+	unsigned char d_addr_3 = *(unsigned char*)(d_addr + 2); 
+	unsigned char d_addr_4 = *(unsigned char*)(d_addr + 3);
 	 
 	printf("(程) d_addr_1 じ\"%c\" ,计 %d\n", d_addr_1, d_addr_1);
 	printf(" d_addr_2 じ\"%c\" ,计 %d\n", d_addr_2, d_addr_2);
