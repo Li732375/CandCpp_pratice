@@ -50,6 +50,11 @@ int main(){
 	// \unnnn：Unicode 碼點 U+nnnn 表示（C99）
 	// \Unnnnnnnn：Unicode 碼點 U+nnnnnnnn 表示（C99）
 	
+	char a; 
+	printf("測試無內容字元 a = %c\n\n", a);
+	//char b = ''; // [Error] empty character constant
+	//printf("測試無內容字元 a=%c, b=%c", a, b);
+	  
 	char c = '\'';
 	//char _c = ''\'; // [Error] empty character constant
 	
