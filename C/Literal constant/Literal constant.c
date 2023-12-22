@@ -32,11 +32,14 @@ int main(){
 	// \n：換行、新行（newline）
 	// \t：水平定位點（horizontal tab）
 	// \v：垂直定位點（vertical tab）
+	printf("\t以我為頭開始對齊_\v _我是第一列 \n\v第二列_ 第三列就沒有對齊了\n"); // 看來相當空格字元 
+	printf("第四列\n"); // \v 目前在這裡沒有實際作用，等同空一格 
+	
 	// \b：退回一格（backspace）
 	// \r：返回（carriage return）
 	// \f：換頁（formfeed）
 	// \a：嗶聲（alert bell）
-	printf("聲音是這裡指示的(跳出警告視窗的聲音)...\a\n");
+	printf("聲音是這裡指示的(跳出警告視窗的聲音)...\a\n\n");
 	
 	// \\：倒斜線（backslash）
 	// \?：問號
