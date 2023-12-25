@@ -81,11 +81,11 @@ int main(){
 	// 指定。 
 	int number1, number2;
 
-    printf("請輸入兩個數字，中間使用空白區隔）：");
+    printf("請輸入兩個數字，中間使用空白區隔）："); // 指定了使用空白來區隔兩個輸入
     scanf("%d %d", &number1, &number2);
     printf("你輸入的數字：%d %d\n", number1, number2);
 
-    printf("請再輸入兩個數字，中間使用-號區隔）：");
+    printf("請再輸入兩個數字，中間使用-號區隔）："); // 指定了使用 - 來區隔兩個輸入
     scanf("%d-%d", &number1, &number2);
     printf("你輸入的數字：%d-%d\n\n", number1, number2);
 	
@@ -102,13 +102,13 @@ int main(){
 	// 直到讀到不符合的字元為止，剩下的字元仍會存在輸入緩
 	// 衝區中。 
     scanf("%[1-5]", buf); // 只想接受 1 到 5 的字元
-    printf("輸入的字元為 %s\n", buf);
+    printf("輸入的字元為 %s\n\n", buf); // 陣列名稱本身就有位址資訊，故不用 & 來取址，之後會再看到
 
     fflush(stdin); // 清除輸入緩衝區
 
     printf("請輸入 XYZ 任一字元：");
     scanf("%[XYZ]", buf);
-    printf("輸入的字元為 %s\n", buf);
+    printf("輸入的字元為 %s\n\n", buf);
     
     // 可以使用 %[0-9] 指定取得 0 至 9 的字元，
 	// 使用 %[A-z] 指定取得 ASCII 表中的 A 到 z 的字元。
@@ -121,7 +121,7 @@ int main(){
 
     printf("請輸入字串：");
     scanf("%9s", buf);
-    printf("輸入的字串：%s\n", buf);
+    printf("輸入的字串：%s\n\n", buf);
     // 若輸入的字元超過 9，buf 也只會收到 9 個字元加上一個空字元，超過的字元會留在輸入緩衝區。
     // 另一個預防輸入超過 buf 長度的方式，是使用 fgets，
 	// 可以參考〈putchar、getchar、puts、fgets〉的說明。
