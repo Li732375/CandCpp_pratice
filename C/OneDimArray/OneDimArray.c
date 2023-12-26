@@ -40,10 +40,37 @@ int main(){
 	// 陣列在使用時，得知陣列長度是必要的，不可以存取超過陣列長度的記憶體，
 	// 這會發生無法預期的結果，陣列本身並不知道自己的長度資訊。 
 	printf("指定首個元素（number_a[0]）為 %d", number_a[0]);
-	printf("指定首個元素（score_a[0]）為 %.2f", score_a[0]);
+	printf("指定首個元素（score_a[0]）為 %.2lf", score_a[0]);
 	printf("指定首個元素（ascii_a[0]）為 %c", ascii_a[0]);
 	
+	// 陣列名稱就指向陣列記憶體的第一個位置的位址，而索引值表示所指定的陣列元素，
+	// 相對於陣列第一個記憶體位置的位移量（Offset）。 
+	int number_b[5] = {0, 1, 2, 3, 4};
+    int length = sizeof(number_b) / sizeof(number_b[0]);
 	
+	//for(int i = 0; i < length; i++){...} // [Error] 'for' loop initial declarations are only allowed in C99 or C11 mode
+    int i = 0;
+	for(i = 0; i < length; i++) {
+        printf("%d ", number_b[i]); 
+    }
+    printf("\n");
+	
+	// 只希望初始部分元素
+	int number_c[5] = {98, 76}; 
+	double weight[5] = {0.0, 0.1}; 
+	char ch[5] = {'A', 'B'}; 
+	
+	// 不可以將陣列直接指定給另一個陣列
+	int arr1[5];
+	int arr2[5];
+	
+	// 錯誤！不能直接指定陣列給另一個陣列
+	//arr1 = arr2; // [Error] assignment to expression with array type
+	
+	// 只能循序逐個元素進行複製
+	for(int i = 0; i < sizeof(arr1); i++) {
+		arr1[i] = arr2[i];
+	}
 	
 	return 0;
 }
