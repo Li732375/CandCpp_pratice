@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
-	// 要得知字串所含字元長度（不包括空字元），則可以使用 strlen 函
+	// 要得知字串所含字元長度（不包括空字元），則可以使用 strlen 函數 
 	
 	// size_t 是 unsigned 型態，在大部份系統是定義為 unsigned int，
 	// 但在 64 位元系統中可以是 unsigned long。
@@ -11,7 +12,7 @@ int main(){
     scanf("%s", buf);
 
     size_t length = strlen(buf); // strlen 會傳回字元陣列中第一個字元至空字元的長度值減 1
-    printf("字串長度：%lu\n\n", length);
+    printf("buf 字串長度：%lu\n\n", length);
     
     fflush(stdin); // 清除輸入緩衝區
     
@@ -22,7 +23,7 @@ int main(){
     fgets(buf, sizeof(buf) / sizeof(buf[0]), stdin);
     
     length = strlen(buf); // strlen 會傳回字元陣列中第一個字元至空字元的長度值減 1
-    printf("字串長度：%lu\n\n", length);
+    printf("buf 字串長度：%lu\n\n", length);
 	
 	
 	int len = 20;
@@ -37,7 +38,7 @@ int main(){
     char name1[lenOfName1];
     
     strcpy(name1, buf_a);
-    printf("名稱：%s\n\n", name1); 
+    printf("name1 名稱：%s\n", name1);
 	
 	// 不複製換行字元
     int lenOfName2 = lenOfName1 - 1;
@@ -47,8 +48,9 @@ int main(){
     memset(name2, '\0', lenOfName2);
     
     // 複製字串中若干字元內容，可以使用 strncpy
-    strncpy(name2, buf, lenOfName2); // strncpy 不會自動在目的陣列加上空字元
-    printf("名稱：%s\n\n", name2);
+    strncpy(name2, buf_a, lenOfName2); // strncpy 不會自動在目的陣列加上空字元
+    printf("name2 名稱：%s\n\n", name2);
+    
     
     // 要串接兩個字串，則要使用 strcat
     char str1[] = "xyz";
