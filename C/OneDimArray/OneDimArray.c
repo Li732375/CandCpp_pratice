@@ -20,7 +20,7 @@ int main(){
 	// 編譯器實作不一定得支援，然而大多數編
 	// 譯器都支援這個功能。 
 	int len = 0;
-	scanf("%d", &len);
+	scanf("輸入陣列指定長度 %d\n", &len);
 	int arr[len];
 	
 	// 宣告陣列之後，陣列所配置到的記憶體空
@@ -39,9 +39,9 @@ int main(){
 	// 要存取陣列中的值時，可以使用下標（Subscript）運算子 [] 加上索引（Index），指定要存取的陣列元素。 
 	// 陣列在使用時，得知陣列長度是必要的，不可以存取超過陣列長度的記憶體，
 	// 這會發生無法預期的結果，陣列本身並不知道自己的長度資訊。 
-	printf("指定首個元素（number_a[0]）為 %d", number_a[0]);
-	printf("指定首個元素（score_a[0]）為 %.2lf", score_a[0]);
-	printf("指定首個元素（ascii_a[0]）為 %c", ascii_a[0]);
+	printf("指定首個元素（number_a[0]）為 %d\n", number_a[0]);
+	printf("指定首個元素（score_a[0]）為 %.2lf\n", score_a[0]);
+	printf("指定首個元素（ascii_a[0]）為 %c\n", ascii_a[0]);
 	
 	// 陣列名稱就指向陣列記憶體的第一個位置的位址，而索引值表示所指定的陣列元素，
 	// 相對於陣列第一個記憶體位置的位移量（Offset）。 
@@ -68,7 +68,7 @@ int main(){
 	//arr1 = arr2; // [Error] assignment to expression with array type
 	
 	// 只能循序逐個元素進行複製
-	for(int i = 0; i < sizeof(arr1); i++) {
+	for(i = 0; i < sizeof(arr1); i++) {
 		arr1[i] = arr2[i];
 	}
 	
