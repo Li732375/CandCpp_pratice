@@ -2,12 +2,12 @@
 
 int main()
 {
-	int a = 3; // è¡¨æ˜è®Šæ•¸ a çš„å…©å€‹åŸºæœ¬å…ƒç´  (è³‡æ–™å‹æ…‹ å’Œ æ•¸å€¼) 
-    printf("int a = %d;\n", a); // é è¨­åªæœƒè¼¸å‡ºæ•¸å€¼ 
-    printf(" &a = %d\n", &a); // "&" ä½œç”¨ç‚ºå–å¾—æ–¼è©²è®Šæ•¸çš„ä½å€ (ä¸é™„è³‡æ–™å‹æ…‹)
+	int a = 3; // ªí©úÅÜ¼Æ a ªº¨â­Ó°ò¥»¤¸¯À (¸ê®Æ«¬ºA ©M ¼Æ­È) 
+    printf("int a = %d;\n", a); // ¹w³]¥u·|¿é¥X¼Æ­È 
+    printf(" &a = %d\n", &a); // "&" §@¥Î¬°¨ú±o©ó¸ÓÅÜ¼Æªº¦ì§} (¤£ªş¸ê®Æ«¬ºA)
     
-    // é€™è£¡çš„ "*" ä¸¦éæŒ‡æ¨™ï¼Œè€Œæ˜¯ "é–“æ¥é‹ç®—å­"ï¼Œä½œç”¨ç‚ºå–å¾—æŒ‡æ¨™åƒç…§ (æ–¼è©²ä½å€è®Šæ•¸) çš„å€¼ï¼Œä¸¦ä¾æ“šè³‡æ–™å‹æ…‹
-	// æ±ºå®šç›¸é„°ä½å…ƒçš„æ“·å–é•·åº¦ 
+    // ³o¸Ìªº "*" ¨Ã«D«ü¼Ğ¡A¦Ó¬O "¶¡±µ¹Bºâ¤l"¡A§@¥Î¬°¨ú±o«ü¼Ğ°Ñ·Ó (©ó¸Ó¦ì§}ÅÜ¼Æ) ªº­È¡A¨Ã¨Ì¾Ú¸ê®Æ«¬ºA
+	// ¨M©w¬Û¾F¦ì¤¸ªºÂ^¨úªø«× 
 	printf("*&a = %d\n\n", *&a);
 	
 	
@@ -16,7 +16,7 @@ int main()
 	printf(" a_addr = %d\n", a_addr);
 	printf("*a_addr = ?	(X)\n\n");
 	
-	printf("è‹¥è¦é‡æ–°è¨­å®šæŒ‡æ¨™\n");
+	printf("­Y­n­«·s³]©w«ü¼Ğ\n");
 	a_addr = &a;
 	printf("*a_addr = &a;	(X)\n");
 	printf(" a_addr = &a;	(O)\n\n");
@@ -26,9 +26,9 @@ int main()
 	printf("&a_addr = %d\n\n", &a_addr);
 	
 	//printf("*(int*)(a) = %d\n", *(int*)(a));
-	printf("*(int*)(%d) = %d\n", &a, *(int*)(&a)); // é€™è£¡çš„ " int* " æ‰æ˜¯æŒ‡æ¨™ï¼ŒæŒ‡æ¨™ä¸€å®šè¦é™„å¸¶è³‡æ–™å‹æ…‹
+	printf("*(int*)(%d) = %d\n", &a, *(int*)(&a)); // ³o¸Ìªº " int* " ¤~¬O«ü¼Ğ¡A«ü¼Ğ¤@©w­nªş±a¸ê®Æ«¬ºA
 	printf(" (int*)(%d) = %d\n", &a, (int*)(&a));
-	printf("=> å¯¦éš›ä¸Šæ”¾åœ¨è®Šæ•¸ a_addr è£¡é¢çš„å…§å®¹ = (int*)(%d)\n\n", &a);
+	printf("=> ¹ê»Ú¤W©ñ¦bÅÜ¼Æ a_addr ¸Ì­±ªº¤º®e = (int*)(%d)\n\n", &a);
 	printf(" (int**)(%d) = %d\n", &a, (int**)(&a));
 	printf(" (int***)(%d) = %d\n", &a, (int***)(&a));
 	printf("*(int**)(%d) = %d\n\n", &a, *(int**)(&a));
@@ -36,19 +36,19 @@ int main()
 	
 	int a_addr_addr = 0;
 	
-	printf("è¼¸å…¥ a_addr çš„ä½å€: ");
+	printf("¿é¤J a_addr ªº¦ì§}: ");
 	scanf("%d", &a_addr_addr);
-	unsigned char a_addr_addr_1 = *(unsigned char*)a_addr_addr; // è‹¥æˆªæ‰ "*(unsigned char*)"ï¼Œåƒ…æœƒä¿ç•™ä½å€ 
+	unsigned char a_addr_addr_1 = *(unsigned char*)a_addr_addr; // ­YºI±¼ "*(unsigned char*)"¡A¶È·|«O¯d¦ì§} 
 	unsigned char a_addr_addr_2 = *(unsigned char*)(a_addr_addr + 1);
 	unsigned char a_addr_addr_3 = *(unsigned char*)(a_addr_addr + 2); 
 	unsigned char a_addr_addr_4 = *(unsigned char*)(a_addr_addr + 3);
 	 
-	printf("(æœ€å³) a_addr_addr_1 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", a_addr_addr_1, a_addr_addr_1);
-	printf("       a_addr_addr_2 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", a_addr_addr_2, a_addr_addr_2);
-	printf("       a_addr_addr_3 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", a_addr_addr_3, a_addr_addr_3);
-	printf("(æœ€å·¦) a_addr_addr_4 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n",a_addr_addr_4, a_addr_addr_4);
+	printf("(³Ì¥k) a_addr_addr_1 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", a_addr_addr_1, a_addr_addr_1);
+	printf("       a_addr_addr_2 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", a_addr_addr_2, a_addr_addr_2);
+	printf("       a_addr_addr_3 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", a_addr_addr_3, a_addr_addr_3);
+	printf("(³Ì¥ª) a_addr_addr_4 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n",a_addr_addr_4, a_addr_addr_4);
 	
-	printf("æª¢è¦–ä¸Šè¿°å››å€‹å­—å…ƒ (çš† %d byte) çš„ä½å…ƒç¸½å’Œæ‡‰ç­‰æ–¼ %d (%d byte)\n\n",
+	printf("ÀËµø¤W­z¥|­Ó¦r¤¸ (¬Ò %d byte) ªº¦ì¤¸Á`©MÀ³µ¥©ó %d (%d byte)\n\n",
 	 sizeof(a_addr_addr_1), &a, sizeof(a_addr_addr));
 	
 	
@@ -60,15 +60,15 @@ int main()
 	
 	int v_addr;
 	
-	printf("è¼¸å…¥ v çš„ä½å€: ");
+	printf("¿é¤J v ªº¦ì§}: ");
 	scanf("%d", &v_addr);
 	unsigned char v_addr_1 = *(unsigned char*)(v_addr);	
 	unsigned char v_addr_2 = *(unsigned char*)(v_addr + 1);
 	
-	printf("(å³åŠé‚Š) v_addr_1 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", v_addr_1, v_addr_1);
-	printf("(å·¦åŠé‚Š) v_addr_2 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", v_addr_2, v_addr_2);
+	printf("(¥k¥bÃä) v_addr_1 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", v_addr_1, v_addr_1);
+	printf("(¥ª¥bÃä) v_addr_2 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", v_addr_2, v_addr_2);
 	
-	printf("æª¢è¦–ä¸Šè¿°å…©å€‹å­—å…ƒ (çš† %d byte) çš„ä½å…ƒçµ„ç¸½å’Œæ‡‰ç­‰æ–¼ %d (%d byte)\n\n",
+	printf("ÀËµø¤W­z¨â­Ó¦r¤¸ (¬Ò %d byte) ªº¦ì¤¸²ÕÁ`©MÀ³µ¥©ó %d (%d byte)\n\n",
 	 sizeof(v_addr_1), v, sizeof(v));
 	
 	
@@ -78,36 +78,36 @@ int main()
 	
 	int d_addr = 0;
 	
-	printf("è¼¸å…¥ d çš„ä½å€: ");
+	printf("¿é¤J d ªº¦ì§}: ");
 	scanf("%d", &d_addr);
-	unsigned char d_addr_1 = *(unsigned char*)d_addr; // è‹¥æˆªæ‰ "*(unsigned char*)"ï¼Œåƒ…æœƒä¿ç•™ä½å€ 
+	unsigned char d_addr_1 = *(unsigned char*)d_addr; // ­YºI±¼ "*(unsigned char*)"¡A¶È·|«O¯d¦ì§} 
 	unsigned char d_addr_2 = *(unsigned char*)(d_addr + 1);
 	unsigned char d_addr_3 = *(unsigned char*)(d_addr + 2); 
 	unsigned char d_addr_4 = *(unsigned char*)(d_addr + 3);
 	 
-	printf("(æœ€å³) d_addr_1 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", d_addr_1, d_addr_1);
-	printf("       d_addr_2 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", d_addr_2, d_addr_2);
-	printf("       d_addr_3 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n", d_addr_3, d_addr_3);
-	printf("(æœ€å·¦) d_addr_4 å­—å…ƒç‚º\"%c\" ,æ•¸å€¼ç‚º %d\n",d_addr_4, d_addr_4);
+	printf("(³Ì¥k) d_addr_1 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", d_addr_1, d_addr_1);
+	printf("       d_addr_2 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", d_addr_2, d_addr_2);
+	printf("       d_addr_3 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n", d_addr_3, d_addr_3);
+	printf("(³Ì¥ª) d_addr_4 ¦r¤¸¬°\"%c\" ,¼Æ­È¬° %d\n",d_addr_4, d_addr_4);
 	
-	printf("æª¢è¦–ä¸Šè¿°å››å€‹å­—å…ƒ (çš† %d byte) çš„ä½å…ƒç¸½å’Œæ‡‰ç­‰æ–¼ %d (%d byte)\n\n",
+	printf("ÀËµø¤W­z¥|­Ó¦r¤¸ (¬Ò %d byte) ªº¦ì¤¸Á`©MÀ³µ¥©ó %d (%d byte)\n\n",
 	 sizeof(d_addr_1), d, sizeof(d));
 	
 	
 
     int b, c;
-    printf("\nè¼¸å…¥å…©æ•¸å­— (æ ¼è‡³å°‘ä¸€ç©ºæ ¼æˆ–ä¸€æ›è¡Œçš†å¯):\n");
-    printf("ä»¥ scanf(\"%%d%%d\", &b, &c) è®€å…¥\n");
-    scanf("%d%d", &b, &c); // è¼¸å…¥æ™‚ï¼Œç„¡è«–æ›è¡Œæˆ–ç©ºæ ¼è¼¸å…¥çš†å¯ï¼Œè¼¸å…¥ç¸½æ•¸æ»¿æ‰æœƒåŸ·è¡Œ 
-    printf("b å€¼ç‚º %d, c å€¼ç‚º %d, b*c å€¼ç‚º %d\n", c, b, b*c);
+    printf("\n¿é¤J¨â¼Æ¦r (®æ¦Ü¤Ö¤@ªÅ®æ©Î¤@´«¦æ¬Ò¥i):\n");
+    printf("¥H scanf(\"%%d%%d\", &b, &c) Åª¤J\n");
+    scanf("%d%d", &b, &c); // ¿é¤J®É¡AµL½×´«¦æ©ÎªÅ®æ¿é¤J¬Ò¥i¡A¿é¤JÁ`¼Æº¡¤~·|°õ¦æ 
+    printf("b ­È¬° %d, c ­È¬° %d, b*c ­È¬° %d\n", c, b, b*c);
     
-	printf("\nå†ä¸€æ¬¡\n");
-	printf("è¼¸å…¥å…©æ•¸å­— (æ ¼è‡³å°‘ä¸€ç©ºæ ¼æˆ–ä¸€æ›è¡Œçš†å¯):\n");
-    printf("ä»¥ scanf(\"%%d%%d\", b, c) è®€å…¥\n");
+	printf("\n¦A¤@¦¸\n");
+	printf("¿é¤J¨â¼Æ¦r (®æ¦Ü¤Ö¤@ªÅ®æ©Î¤@´«¦æ¬Ò¥i):\n");
+    printf("¥H scanf(\"%%d%%d\", b, c) Åª¤J\n");
     scanf("%d%d", b, c);
-    printf("b å€¼ç‚º %d, c å€¼ç‚º %d, b*c å€¼ç‚º %d\n", c, b, b*c); // æœ¬è¡Œæœªé¡¯ç¤ºæ­£å¸¸ï¼Œä¸”å›å‚³å€¼å¿…å®šé 0 
+    printf("b ­È¬° %d, c ­È¬° %d, b*c ­È¬° %d\n", c, b, b*c); // ¥»¦æ¥¼Åã¥Ü¥¿±`¡A¥B¦^¶Ç­È¥²©w«D 0 
     
-    printf("ç•™æ„æ­¤è¡Œå…§å®¹æ˜¯å¦æœƒé¡¯ç¤º");
+    printf("¯d·N¦¹¦æ¤º®e¬O§_·|Åã¥Ü");
     
     
     return 0;

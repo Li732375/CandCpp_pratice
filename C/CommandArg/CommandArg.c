@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-// 若要使用命令列引數，可以在括號中如下填寫
-int main(int argc, char *argv[]){ // 嚙諸潘蕭 argc 嚙瞌嚙瑾嚙諉橘蕭?嚙璀嚙瞌嚙踝蕭嚙磋嚙瞌嚙瘠嚙豬數迎蕭嚙諉數，嚙緻嚙諉數目包嚙璀嚙瘤嚙緹嚙踝蕭嚙磕嚙踝蕭
+// �Y�n�ϥΩR�O�C�޼ơA�i�H�b�A�����p�U��g
+int main(int argc, char *argv[]){ // �Ѽ� argc �O�@�Ӿ�?�A�O���R�O�C�޼ƪ��ӼơA�o�Ӽƥإ]�A�F�{���W��
 	
 	int i = 0;
 	for(i = 1; i < argc; i++) {
@@ -12,12 +12,12 @@ int main(int argc, char *argv[]){ // 嚙諸潘蕭 argc 嚙瞌嚙瑾嚙諉橘蕭?
 	
 }
 
-// 參數 argc 是一個整數，記錄命令列引數的個數，這個數目包括了程式名稱，例如下面的執行指令，argc 將記錄為 5
+// �Ѽ� argc �O�@�Ӿ�ơA�O���R�O�C�޼ƪ��ӼơA�o�Ӽƥإ]�A�F�{���W�١A�Ҧp�U����������O�Aargc �N�O���� 5
 // prog hello.c -o  -c project.p
 
-// 引數之間以空白作區隔，上面的命令包括程式名稱共會有五個引數
+// �޼Ƥ����H�ťէ@�Ϲj�A�W�����R�O�]�A�{���W�٦@�|�����Ӥ޼�
 
-// argc 的值一定大於 1，因為至少包括了程式名稱，而 argv 分別儲存了引數的字串
+// argc ���Ȥ@�w�j�� 1�A�]���ܤ֥]�A�F�{���W�١A�� argv ���O�x�s�F�޼ƪ��r��
 
-// 若輸入是一個包括空白的字串，就使用 "" 來包括
+// �Y��J�O�@�ӥ]�A�ťժ��r��A�N�ϥ� "" �ӥ]�A
 // prog "This is a string!" 

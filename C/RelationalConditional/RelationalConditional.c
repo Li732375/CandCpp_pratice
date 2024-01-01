@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(){
-	// C ä¸­ä¹Ÿæä¾›é—œä¿‚é‹ç®—å­ï¼ˆRelational operatorï¼‰æˆ–æ¯”è¼ƒé‹ç®—å­ï¼ˆComparison operatorï¼‰ï¼Œ
-	// å®ƒå€‘æœ‰å¤§æ–¼ï¼ˆ>ï¼‰ã€ä¸å°æ–¼ï¼ˆ>=ï¼‰ã€å°æ–¼ï¼ˆ<ï¼‰ã€ä¸å¤§æ–¼ï¼ˆ<=ï¼‰ã€ç­‰æ–¼ ï¼ˆ==ï¼‰ä»¥åŠä¸ç­‰æ–¼ï¼ˆ!=ï¼‰ã€‚
+	// C ¤¤¤]´£¨ÑÃö«Y¹Bºâ¤l¡]Relational operator¡^©Î¤ñ¸û¹Bºâ¤l¡]Comparison operator¡^¡A
+	// ¥¦­Ì¦³¤j©ó¡]>¡^¡B¤£¤p©ó¡]>=¡^¡B¤p©ó¡]<¡^¡B¤£¤j©ó¡]<=¡^¡Bµ¥©ó ¡]==¡^¥H¤Î¤£µ¥©ó¡]!=¡^¡C
 	
 	printf("10 > 5\t\t%d\n", 10 > 5);
 	printf("10 >= 5\t\t%d\n", 10 >= 5);
@@ -11,22 +11,22 @@ int main(){
 	printf("10 == 5\t\t%d\n", 10 == 5);
 	printf("10 != 5\t\t%d\n\n", 10 != 5);
 	
-	// æ¢ä»¶é‹ç®—å­ï¼ˆConditional operatorï¼‰
-	// æ¢ä»¶å¼ ? æˆç«‹å‚³å›å€¼ : å¤±æ•—å‚³å›å€¼
+	// ±ø¥ó¹Bºâ¤l¡]Conditional operator¡^
+	// ±ø¥ó¦¡ ? ¦¨¥ß¶Ç¦^­È : ¥¢±Ñ¶Ç¦^­È
 	int score = 0;
 
-    printf("è¼¸å…¥å­¸ç”Ÿåˆ†æ•¸ï¼š");
+    printf("¿é¤J¾Ç¥Í¤À¼Æ¡G");
     scanf("%d", &score);
 
-    printf("è©²ç”Ÿæ˜¯å¦åŠæ ¼ï¼Ÿ%c\n\n", score >= 60 ? 'Y' : 'N');
+    printf("¸Ó¥Í¬O§_¤Î®æ¡H%c\n\n", score >= 60 ? 'Y' : 'N');
 	
 	
 	int input = 0;
 
-    printf("è¼¸å…¥æ•´æ•¸ï¼š");
+    printf("¿é¤J¾ã¼Æ¡G");
     scanf("%d", &input);
 
-    printf("è©²æ•¸ç‚ºå¥‡æ•¸ï¼Ÿ%c\n", input % 2 ? 'Y' : 'N');
+    printf("¸Ó¼Æ¬°©_¼Æ¡H%c\n", input % 2 ? 'Y' : 'N');
 	
 	return 0;
 } 

@@ -3,26 +3,26 @@
 
 
 int main(){
-	// å…©å€‹å­—ä¸²é–‹å§‹ä¸åŒ¹é…çš„ç¬¬ä¸€å€‹å­—å…ƒç´¢å¼•ä½ç½®ï¼Œå¦å‰‡å‚³å› 0
+	// ¨â­Ó¦r¦ê¶}©l¤£¤Ç°tªº²Ä¤@­Ó¦r¤¸¯Á¤Ş¦ì¸m¡A§_«h¶Ç¦^ 0
 	int LEN = 80;
 	char str1[LEN];
     char str2[LEN];
 
-    printf("è¼¸å…¥å­—ä¸²ï¼š");
+    printf("¿é¤J¦r¦ê¡G");
     fgets(str1, LEN, stdin);
 
-    printf("æœå°‹å­å­—ä¸²ï¼š");
+    printf("·j´M¤l¦r¦ê¡G");
     fgets(str2, LEN, stdin);
-    // å»é™¤æœ€å¾Œçš„æ›è¡Œå­—å…ƒ
+    // ¥h°£³Ì«áªº´«¦æ¦r¤¸
     str2[strlen(str2) - 1] = '\0';
 
     size_t loc = strspn(str1, str2);
 
     if(loc == strlen(str1)) {
-        printf("å®Œå…¨åŒ¹é…\n");
+        printf("§¹¥ş¤Ç°t\n");
     }
     else {
-        printf("å¾ç´¢å¼•ä½ç½® %lu è™•é–‹å§‹ä¸åŒ¹é…\n", loc);
+        printf("±q¯Á¤Ş¦ì¸m %lu ³B¶}©l¤£¤Ç°t\n", loc);
     }
 	
 	return 0;

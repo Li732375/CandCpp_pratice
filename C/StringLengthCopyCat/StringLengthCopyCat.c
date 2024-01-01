@@ -2,70 +2,70 @@
 #include <string.h>
 
 int main(){
-	// è¦å¾—çŸ¥å­—ä¸²æ‰€å«å­—å…ƒé•·åº¦ï¼ˆä¸åŒ…æ‹¬ç©ºå­—å…ƒï¼‰ï¼Œå‰‡å¯ä»¥ä½¿ç”¨ strlen å‡½æ•¸ 
+	// ­n±oª¾¦r¦ê©Ò§t¦r¤¸ªø«×¡]¤£¥]¬AªÅ¦r¤¸¡^¡A«h¥i¥H¨Ï¥Î strlen ¨ç¼Æ 
 	
-	// size_t æ˜¯ unsigned å‹æ…‹ï¼Œåœ¨å¤§éƒ¨ä»½ç³»çµ±æ˜¯å®šç¾©ç‚º unsigned intï¼Œ
-	// ä½†åœ¨ 64 ä½å…ƒç³»çµ±ä¸­å¯ä»¥æ˜¯ unsigned longã€‚
+	// size_t ¬O unsigned «¬ºA¡A¦b¤j³¡¥÷¨t²Î¬O©w¸q¬° unsigned int¡A
+	// ¦ı¦b 64 ¦ì¤¸¨t²Î¤¤¥i¥H¬O unsigned long¡C
 	char buf[80];
 
-    puts("è«‹è¼¸å…¥å­—ä¸²...");
+    puts("½Ğ¿é¤J¦r¦ê...");
     scanf("%s", buf);
 
-    size_t length = strlen(buf); // strlen æœƒå‚³å›å­—å…ƒé™£åˆ—ä¸­ç¬¬ä¸€å€‹å­—å…ƒè‡³ç©ºå­—å…ƒçš„é•·åº¦å€¼æ¸› 1
-    printf("buf å­—ä¸²é•·åº¦ï¼š%lu\n\n", length);
+    size_t length = strlen(buf); // strlen ·|¶Ç¦^¦r¤¸°}¦C¤¤²Ä¤@­Ó¦r¤¸¦ÜªÅ¦r¤¸ªºªø«×­È´î 1
+    printf("buf ¦r¦êªø«×¡G%lu\n\n", length);
     
-    fflush(stdin); // æ¸…é™¤è¼¸å…¥ç·©è¡å€
+    fflush(stdin); // ²M°£¿é¤J½w½Ä°Ï
     
-    puts("è«‹è¼¸å…¥å­—ä¸²...");
+    puts("½Ğ¿é¤J¦r¦ê...");
     scanf("%s", buf);
     
-	// ä½¿ç”¨ fgets çš„è©±ï¼Œè¦æ³¨æ„å®ƒæœƒåŒ…æ‹¬æœ€å¾ŒæŒ‰ä¸‹ Enter çš„æ›è¡Œå­—å…ƒã€‚ 
+	// ¨Ï¥Î fgets ªº¸Ü¡A­nª`·N¥¦·|¥]¬A³Ì«á«ö¤U Enter ªº´«¦æ¦r¤¸¡C 
     fgets(buf, sizeof(buf) / sizeof(buf[0]), stdin);
     
-    length = strlen(buf); // strlen æœƒå‚³å›å­—å…ƒé™£åˆ—ä¸­ç¬¬ä¸€å€‹å­—å…ƒè‡³ç©ºå­—å…ƒçš„é•·åº¦å€¼æ¸› 1
-    printf("buf å­—ä¸²é•·åº¦ï¼š%lu\n\n", length);
+    length = strlen(buf); // strlen ·|¶Ç¦^¦r¤¸°}¦C¤¤²Ä¤@­Ó¦r¤¸¦ÜªÅ¦r¤¸ªºªø«×­È´î 1
+    printf("buf ¦r¦êªø«×¡G%lu\n\n", length);
 	
 	
 	int len = 20;
 	char buf_a[len];
 
-    puts("è«‹è¼¸å…¥åç¨±...");
-    // fgets æœƒåŒ…æ‹¬ enter å­—å…ƒ
+    puts("½Ğ¿é¤J¦WºÙ...");
+    // fgets ·|¥]¬A enter ¦r¤¸
     fgets(buf_a, len, stdin);
     
-	// è¦é€²è¡Œå­—ä¸²è¤‡è£½ï¼Œå¯ä»¥ä½¿ç”¨ strcpy å‡½å¼
+	// ­n¶i¦æ¦r¦ê½Æ»s¡A¥i¥H¨Ï¥Î strcpy ¨ç¦¡
 	int lenOfName1 = strlen(buf_a) + 1;
     char name1[lenOfName1];
     
     strcpy(name1, buf_a);
-    printf("name1 åç¨±ï¼š%s\n", name1);
+    printf("name1 ¦WºÙ¡G%s\n", name1);
 	
-	// ä¸è¤‡è£½æ›è¡Œå­—å…ƒ
+	// ¤£½Æ»s´«¦æ¦r¤¸
     int lenOfName2 = lenOfName1 - 1;
     char name2[lenOfName2];
     
-    // è¨­å®šå…¨éƒ¨å­—å…ƒç‚ºç©ºå­—å…ƒ
+    // ³]©w¥ş³¡¦r¤¸¬°ªÅ¦r¤¸
     memset(name2, '\0', lenOfName2);
     
-    // è¤‡è£½å­—ä¸²ä¸­è‹¥å¹²å­—å…ƒå…§å®¹ï¼Œå¯ä»¥ä½¿ç”¨ strncpy
-    strncpy(name2, buf_a, lenOfName2); // strncpy ä¸æœƒè‡ªå‹•åœ¨ç›®çš„é™£åˆ—åŠ ä¸Šç©ºå­—å…ƒ
-    printf("name2 åç¨±ï¼š%s\n\n", name2);
+    // ½Æ»s¦r¦ê¤¤­Y¤z¦r¤¸¤º®e¡A¥i¥H¨Ï¥Î strncpy
+    strncpy(name2, buf_a, lenOfName2); // strncpy ¤£·|¦Û°Ê¦b¥Øªº°}¦C¥[¤WªÅ¦r¤¸
+    printf("name2 ¦WºÙ¡G%s\n\n", name2);
     
     
-    // è¦ä¸²æ¥å…©å€‹å­—ä¸²ï¼Œå‰‡è¦ä½¿ç”¨ strcat
+    // ­n¦ê±µ¨â­Ó¦r¦ê¡A«h­n¨Ï¥Î strcat
     char str1[] = "xyz";
     char str2[] = "abc";
 
     int lent = strlen(str1) + strlen(str2) + 1;
     char concated[lent];
-    memset(concated, '\0', lent); // memset å‡½å¼å°‡å…¨éƒ¨å­—å…ƒè¨­ç‚ºç©ºå­—å…ƒ
+    memset(concated, '\0', lent); // memset ¨ç¦¡±N¥ş³¡¦r¤¸³]¬°ªÅ¦r¤¸
 
     strcat(concated, str1);
     strcat(concated, str2);
-    // ä¸²æ¥éƒ¨ä»½å­—ä¸²ï¼Œå¯ä»¥ä½¿ç”¨ strncat
+    // ¦ê±µ³¡¥÷¦r¦ê¡A¥i¥H¨Ï¥Î strncat
     // strncat(concated, str1);
 
-    printf("ä¸²æ¥å¾Œï¼š%s\n", concated);
+    printf("¦ê±µ«á¡G%s\n", concated);
 	
 	return 0;
 } 

@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include <string.h> // 字串相關 
+#include <string.h> // �r����� 
 
 int main(){
-	// 字串就是一串文字，就是是指字元組成的陣列，最後加上一個空（null）字元 '\0'
+	// �r��N�O�@���r�A�N�O�O���r���զ����}�C�A�̫�[�W�@�Ӫš]null�^�r�� '\0'
 	char text[] = {'h', 'e', 'l', 'l', 'o', '\0'};
 	printf("%s\n", text);
 	
-	char text_a[] = "hello"; // 雖然沒有指定空字元 '\0'，但是會自動加上空字元
+	char text_a[] = "hello"; // ���M�S�����w�Ŧr�� '\0'�A���O�|�۰ʥ[�W�Ŧr��
 	int length = sizeof(text_a) / sizeof(text_a[0]);
 	
 	int i = 0;
@@ -18,24 +18,24 @@ int main(){
         }
     }
     
-    // text 就陣列長度而言會是 6，不過就字串長度而言會是 5
-    printf("陣列長度 %d\n", length);
-    printf("字串長度 %d\n\n", strlen(text_a)); // strlen 可以取得字串長度
+    // text �N�}�C���צӨ��|�O 6�A���L�N�r����צӨ��|�O 5
+    printf("�}�C���� %d\n", length);
+    printf("�r����� %d\n\n", strlen(text_a)); // strlen �i�H���o�r�����
     
-    // 使用 scanf 取得使用者輸入的字串時，格式指定字是使用 %s，
-	// 而變數前不用再加上 &，因為實際上，字串（字元陣列）變數名
-	// 稱本身，即表示記憶體位址資訊。
-	char buf[80]; // 輸入的字串長度不得超過 80 個字元（上限包括空字元），因此實際上可以輸入 79 個字元
+    // �ϥ� scanf ���o�ϥΪ̿�J���r��ɡA�榡���w�r�O�ϥ� %s�A
+	// ���ܼƫe���ΦA�[�W &�A�]����ڤW�A�r��]�r���}�C�^�ܼƦW
+	// �٥����A�Y���ܰO�����}��T�C
+	char buf[80]; // ��J���r����פ��o�W�L 80 �Ӧr���]�W���]�A�Ŧr���^�A�]����ڤW�i�H��J 79 �Ӧr��
 	
-	printf("輸入字串：");
+	printf("��J�r��G");
 	scanf("%s", buf);
-	printf("你輸入的字串為 %s\n\n", buf);
+	printf("�A��J���r�ꬰ %s\n\n", buf);
 	
-	// 指定新的字串值給它時，不能像下面的方式指定
+	// ���w�s���r��ȵ����ɡA���๳�U�����覡���w
 	//char name[80]; 
 	//name = "Justin"; // [Error] assignment to expression with array type
 	
-	// 必須要一個字元一個字元的指定至陣列中，並在最後加上空白字元
+	// �����n�@�Ӧr���@�Ӧr�������w�ܰ}�C���A�æb�̫�[�W�ťզr��
 	char name[80] = {'\0'}; 
 	name[0] = 'J'; 
 	name[1] = 'u'; 
@@ -47,50 +47,50 @@ int main(){
 	puts(name);
 	printf("\n");
 	
-	// 中文字不是一個位元組就可以儲存的資料，因此引發警訊
+	// ����r���O�@�Ӧ줸�մN�i�H�x�s����ơA�]���޵oĵ�T
 	
 	// [Warning] overflow in implicit constant conversion [-Woverflow]
 	// [Warning] multi-character character constant [-Wmultichar]
-	//char t = '林'; 
+	//char t = '�L'; 
 	
-	// 需要使用以下的方式
-	char text[] = "林"; 
+	// �ݭn�ϥΥH�U���覡
+	char text[] = "�L"; 
 	
-	// 若使用 strlen(text) 會得到什麼數字呢？
-	// 答案是看你的原始碼編碼是什麼，
-	// 如果使用 Big5 撰寫原始碼的話，
-	// 答案會是 2，如果使用 UTF-8 撰
-	// 寫原始碼的話，答案會是 3。
+	// �Y�ϥ� strlen(text) �|�o�줰��Ʀr�O�H
+	// ���׬O�ݧA����l�X�s�X�O����A
+	// �p�G�ϥ� Big5 ���g��l�X���ܡA
+	// ���׷|�O 2�A�p�G�ϥ� UTF-8 ��
+	// �g��l�X���ܡA���׷|�O 3�C
 	
-	// char 是用來儲存字元資料，至於存什麼沒有規定，
-	// 對於 char text[] = "林" 的情況，應該將 text 
-	// 中每個索引位置當成是碼元（code unit），而不
-	// 是字元了，因為必須以多個位元組來儲存「林」，
-	// 因此這類字元在 C 被稱為多位元組字元（multibyte character），
-	// 技術上來說，是用數個 char 組成的一個字元，
-	// 如何組成就要看採用哪種編碼。
+	// char �O�Ψ��x�s�r����ơA�ܩ�s����S���W�w�A
+	// ��� char text[] = "�L" �����p�A���ӱN text 
+	// ���C�ӯ��ަ�m�����O�X���]code unit�^�A�Ӥ�
+	// �O�r���F�A�]�������H�h�Ӧ줸�ը��x�s�u�L�v�A
+	// �]���o���r���b C �Q�٬��h�줸�զr���]multibyte character�^�A
+	// �޳N�W�ӻ��A�O�μƭ� char �զ����@�Ӧr���A
+	// �p��զ��N�n�ݱĥέ��ؽs�X�C
 	
-	// 若要固定使用 UTF-8 編碼字串，C11 可以 UTF-8 撰寫原始碼，並在 "" 前置 u8，指定字串使用
-	char text_a[] = u8"林";
-	printf("字串長度 %d", strlen(text)); // 顯示 3 
+	// �Y�n�T�w�ϥ� UTF-8 �s�X�r��AC11 �i�H UTF-8 ���g��l�X�A�æb "" �e�m u8�A���w�r��ϥ�
+	char text_a[] = u8"�L";
+	printf("�r����� %d", strlen(text)); // ��� 3 
 	
-	// 若不使用 UTF-8 編碼的原始碼，可以使用碼點指定
+	// �Y���ϥ� UTF-8 �s�X����l�X�A�i�H�ϥνX�I���w
 	char text[] = u8"\u6797";
-	printf("字串長度 %d", strlen(text)); // 顯示 3
+	printf("�r����� %d", strlen(text)); // ��� 3
 	
-	// 想知道有幾個中文字怎麼辦？
-	// 要知道 wchar_t 型態，對應的字元常量是 L'林' 的寫法
-	// 稱為擴充字元字面常量（wide character literal），
-	// wchar_t 其實是個整數型態，用來儲存碼點，就現今來說，
-	// 基本上是指 Unicode。
-	wchar_t ch = L'林'; // 也可以寫 L'\u6797'
-	printf("%d", ch);   // 顯示 26519
+	// �Q���D���X�Ӥ���r����H
+	// �n���D wchar_t ���A�A�������r���`�q�O L'�L' ���g�k
+	// �٬��X�R�r���r���`�q�]wide character literal�^�A
+	// wchar_t ���O�Ӿ�ƫ��A�A�Ψ��x�s�X�I�A�N�{���ӻ��A
+	// �򥻤W�O�� Unicode�C
+	wchar_t ch = L'�L'; // �]�i�H�g L'\u6797'
+	printf("%d", ch);   // ��� 26519
 
-	wchar_t text_b[] = L"良葛格";  // 擴充字元字串（wide-chararater string）
-	// wcs 就是 wide-chararater string 的縮寫
-    printf("字串長度 %d", wcslen(text_b)); // 顯示 3
+	wchar_t text_b[] = L"�}����";  // �X�R�r���r��]wide-chararater string�^
+	// wcs �N�O wide-chararater string ���Y�g
+    printf("�r����� %d", wcslen(text_b)); // ��� 3
     
-    // wchar_t 並沒有規定大小，只要求必須容納系統中可以使用的字元
+    // wchar_t �èS���W�w�j�p�A�u�n�D�����e�Ǩt�Τ��i�H�ϥΪ��r��
     
     
 	
