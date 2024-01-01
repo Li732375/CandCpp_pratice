@@ -2,129 +2,129 @@
 
 int main(){
 	
-	// printf() �N�O�N���w����r�B�ƭȵ���X�ܿù��W�A�åB����L��|�Ǧ^�ҿ�X���r���ơC
+	// printf() 就是將指定的文字、數值等輸出至螢幕上，並且執行過後會傳回所輸出的字元數。
 	int count = printf("hello world!\n");
-	printf("�o�y���׬� %d (�]�t�r��r���� \\0)\n\n", count);
+	printf("這句長度為 %d (包含字串字尾的 \\0)\n\n", count);
 	
-	// �b����x����{���ɨϥ� >> �N��X���G�ɦV�ܫ��w�ɮסA�Ҧp�]���]�s
-	// Ķ�᪺�i�����ɦW�� PrintfScanf�^
+	// 在控制台執行程式時使用 >> 將輸出結果導向至指定檔案，例如（假設編
+	// 譯後的可執行檔名為 PrintfScanf）
 	
 	//PrintfScanf >> result.txt;
 	
-	// �n���s�ɦV�зǿ�X�O�� >,�зǿ�J�h�O <�A�� >> ���F���ɼзǿ�X�A
-	// �٦����[���\��A�]�N�O�|���X���[��Q�ɦV���ؼ��ɮ׫��Y�A�p�G��
-	// ���ɮץ��Ӥ��s�b�A����ĪG�N�M > �@�ˡC
+	// 要重新導向標準輸出是用 >,標準輸入則是 <，而 >> 除了重導標準輸出，
+	// 還有附加的功能，也就是會把輸出附加到被導向的目標檔案後頭，如果目
+	// 標檔案本來不存在，那麼效果就和 > 一樣。
 	
-	// �b�ϥ� printf �ɭn���w��ơB�B�I�ơB�r�����i����ܡA�n�t�X�榡��
-	// �w�r�]format specifier�^�A�H�U�C�X�X�ӥi�Ϊ��榡���w�X�G
+	// 在使用 printf 時要指定整數、浮點數、字元等進行顯示，要配合格式指
+	// 定字（format specifier），以下列出幾個可用的格式指定碼：
 
-	// %c�G�H�r���覡��X
-	// %d�G10 �i���ƿ�X
-	// %o�G�H 8 �i���Ƥ覡��X
-	// %u�G�L����ƿ�X
-	// %x�B%X�G�N��ƥH 16 �i��覡��X
-	// %e�B%E�G�ϥά�ǰO����ܯB�I��
-	// %g�B%G�G�B�I�ƿ�X�A�� %f �� %e�]%f �� %E�^�A�ݭ��Ӫ��ܺ�²
-	// %%�G��� %
-	// %s�G�r���X
-	// %lu�Glong unsigned ���A�����
-	// %p�G���Ы��A
+	// %c：以字元方式輸出
+	// %d：10 進位整數輸出
+	// %o：以 8 進位整數方式輸出
+	// %u：無號整數輸出
+	// %x、%X：將整數以 16 進位方式輸出
+	// %e、%E：使用科學記號顯示浮點數
+	// %g、%G：浮點數輸出，取 %f 或 %e（%f 或 %E），看哪個表示精簡
+	// %%：顯示 %
+	// %s：字串輸出
+	// %lu：long unsigned 型態的整數
+	// %p：指標型態
 	
-	printf("��ܦr�� %c\n", 'A');
-    printf("��ܦr���s�X %d\n", 'A');
-    printf("��ܦr���s�X %c\n", 65);
-    printf("��ܤQ�i���� %d\n", 15);
-    printf("��ܤK�i���� %o\n", 15);
-    printf("��ܤQ���i���� %X\n", 15);
-    printf("��ܤQ���i���� %x\n", 15);
-    printf("��ܬ�ǰO�� %E\n", 0.001234);
-    printf("��ܬ�ǰO�� %e\n\n", 0.001234);
+	printf("顯示字元 %c\n", 'A');
+    printf("顯示字元編碼 %d\n", 'A');
+    printf("顯示字元編碼 %c\n", 65);
+    printf("顯示十進位整數 %d\n", 15);
+    printf("顯示八進位整數 %o\n", 15);
+    printf("顯示十六進位整數 %X\n", 15);
+    printf("顯示十六進位整數 %x\n", 15);
+    printf("顯示科學記號 %E\n", 0.001234);
+    printf("顯示科學記號 %e\n\n", 0.001234);
     
-    // %f�G�B�I�ƿ�X
+    // %f：浮點數輸出
     printf("example:%f\n", 19.234);
-	printf("example:%.2f\n", 19.234); // .2 ���w�p���I������
+	printf("example:%.2f\n", 19.234); // .2 指定小數點後取兩位
 	
-	// ��� 6 ���ܹw�d 6 �Ӧr���e�סA�ѩ�
-	// �w�d�F 6 �Ӧr���e�סA�����������n
-	// �Ѫťզr���ɤW�C 
-	printf("example:%6.2f\n", 19.234); // �]19.23�@�����Ӧr���A�ҥH�b�e�ݸɤW�@�Ӫťա^
+	// 整數 6 表示預留 6 個字元寬度，由於
+	// 預留了 6 個字元寬度，不足的部份要
+	// 由空白字元補上。 
+	printf("example:%6.2f\n", 19.234); // （19.23共佔五個字元，所以在前端補上一個空白）
 	
-	// �Y�b % ������w�t���A�Ҧp %-6.2f�A
-	// ���ܾa������A�S�����w�h�a�k����C
-	// = �ȧ@�Y��ĪG�ΡC 
+	// 若在 % 之後指定負號，例如 %-6.2f，
+	// 表示靠左對齊，沒有指定則靠右對齊。
+	// = 僅作凸顯效果用。 
 	printf("example:=%6.2f=\n", 19.234);
     printf("example:=%-6.2f=\n\n", 19.234);
 	
-	// * �N�Q���᪺�Ĥ@�Ӥ޼ƩҨ��N�A�ҥH
-	// �Ĥ@�� printf() �N�w�d�@�Ӧr���e�סC 
+	// * 將被之後的第一個引數所取代，所以
+	// 第一個 printf() 將預留一個字元寬度。 
 	printf("%*d\n", 1, 1);
 	printf("%*d\n", 2, 1); 
     printf("%*d\n\n", 3, 1);
     
-    printf("%.*f\n", 2, 1.5);// �ĪG�P .2 
-    printf("%*f\n\n", 2, 1.5); // �B�I�ƵL��
+    printf("%.*f\n", 2, 1.5);// 效果同 .2 
+    printf("%*f\n\n", 2, 1.5); // 浮點數無效
     
-    // �r�ꪺ�ܡA�]�i�H�ϥ� %.*s�A�o���ܭn
-	// ��ܦr�ꤤ 0 ��h�Ӧr���A��ڪ��r��
-	// �ƥi�H�b�ĤG�ӰѼƫ��w�C
+    // 字串的話，也可以使用 %.*s，這表示要
+	// 顯示字串中 0 到多個字元，實際的字元
+	// 數可以在第二個參數指定。
 	printf("%.*s\n", 3, "Justin");
     printf("%.*s\n", 5, "Justin");
     printf("%.*s\n\n\n", 7, "Justin");
 	
 	
-	// �b�{�������ŧi�F�@�Ӿ���ܼ� input�A
-	// �ϥ� scanf() �禡�ɡA�Y��J���ƭȬ�
-	// ��ơA�h�ϥή榡���w�r %d�A�Y��J��
-	// �O��L��ƫ��A�A�h�����ϥι�������
-	// �����w�r�C 
-	// �p�G�O double�A�S�O�`�N�n�ϥ� %lf ��
-	// ���w�C 
+	// 在程式中先宣告了一個整數變數 input，
+	// 使用 scanf() 函式時，若輸入的數值為
+	// 整數，則使用格式指定字 %d，若輸入的
+	// 是其他資料型態，則必須使用對應的格
+	// 式指定字。 
+	// 如果是 double，特別注意要使用 %lf 來
+	// 指定。 
 	int number1, number2;
 
-    printf("�п�J��ӼƦr�A�����ϥΪťհϹj�^�G"); // ���w�F�ϥΪťըӰϹj��ӿ�J
+    printf("請輸入兩個數字，中間使用空白區隔）："); // 指定了使用空白來區隔兩個輸入
     scanf("%d %d", &number1, &number2);
-    printf("�A��J���Ʀr�G%d %d\n", number1, number2);
+    printf("你輸入的數字：%d %d\n", number1, number2);
 
-    printf("�ЦA��J��ӼƦr�A�����ϥ�-���Ϲj�^�G"); // ���w�F�ϥ� - �ӰϹj��ӿ�J
+    printf("請再輸入兩個數字，中間使用-號區隔）："); // 指定了使用 - 來區隔兩個輸入
     scanf("%d-%d", &number1, &number2);
-    printf("�A��J���Ʀr�G%d-%d\n\n", number1, number2);
+    printf("你輸入的數字：%d-%d\n\n", number1, number2);
 	
-	// scanf �i�H���w�i�������r�����X�C
+	// scanf 可以指定可接受的字元集合。
 	 
-	// �r��O�r���}�C�A�ӥB�̫�@�Ӥ��������O�Ŧr�� �C
+	// 字串是字元陣列，而且最後一個元素必須是空字元 。
 	
-	// ���쪺�r���Y�W�X buf�A�٬��w�İϷ���]buffer overflow�^�A
-	// �|�o�ͤ��i�w�������G�A�Ʀܦ����w���z�I�C 
-	char buf[50]; // ���׬� 50�A��J���r���̦h�u��O 49 �ӡC 
+	// 收到的字元若超出 buf，稱為緩衝區溢位（buffer overflow），
+	// 會發生不可預期的結果，甚至成為安全弱點。 
+	char buf[50]; // 長度為 50，輸入的字元最多只能是 49 個。 
 
-    printf("�п�J 1 �� 5 ���r���G");
-    // scanf �禡�s��Ū�J�ŦX���X���r���é��r���}�C���A
-	// ����Ū�줣�ŦX���r������A�ѤU���r�����|�s�b��J�w
-	// �İϤ��C 
-    scanf("%[1-5]", buf); // �u�Q���� 1 �� 5 ���r��
-    printf("��J���r���� %s\n\n", buf); // �}�C�W�٥����N����}��T�A�G���� & �Ө��}�A����|�A�ݨ�
+    printf("請輸入 1 到 5 的字元：");
+    // scanf 函式連續讀入符合集合的字元並放到字元陣列中，
+	// 直到讀到不符合的字元為止，剩下的字元仍會存在輸入緩
+	// 衝區中。 
+    scanf("%[1-5]", buf); // 只想接受 1 到 5 的字元
+    printf("輸入的字元為 %s\n\n", buf); // 陣列名稱本身就有位址資訊，故不用 & 來取址，之後會再看到
 
-    fflush(stdin); // �M����J�w�İ�
+    fflush(stdin); // 清除輸入緩衝區
 
-    printf("�п�J XYZ ���@�r���G");
+    printf("請輸入 XYZ 任一字元：");
     scanf("%[XYZ]", buf);
-    printf("��J���r���� %s\n\n", buf);
+    printf("輸入的字元為 %s\n\n", buf);
     
-    // �i�H�ϥ� %[0-9] ���w���o 0 �� 9 ���r���A
-	// �ϥ� %[A-z] ���w���o ASCII ������ A �� z ���r���C
+    // 可以使用 %[0-9] 指定取得 0 至 9 的字元，
+	// 使用 %[A-z] 指定取得 ASCII 表中的 A 到 z 的字元。
 	
-	// �p�G�n�ư����ܡA�h�ϥ� ^�A�Ҧp %[^ABC] �i���o ABC �r���H�~���Ҧ��r���C
+	// 如果要排除的話，則使用 ^，例如 %[^ABC] 可取得 ABC 字元以外的所有字元。
 	
 	
-	// �w������k���@�O�A���w scanf �C������i�H�������̤j�r���ơC
+	// 預防的方法之一是，限定 scanf 每次執行可以接受的最大字元數。
 	char buf[10];
 
-    printf("�п�J�r��G");
+    printf("請輸入字串：");
     scanf("%9s", buf);
-    printf("��J���r��G%s\n\n", buf);
-    // �Y��J���r���W�L 9�Abuf �]�u�|���� 9 �Ӧr���[�W�@�ӪŦr���A�W�L���r���|�d�b��J�w�İϡC
-    // �t�@�ӹw����J�W�L buf ���ת��覡�A�O�ϥ� fgets�A
-	// �i�H�Ѧҡqputchar�Bgetchar�Bputs�Bfgets�r�������C
+    printf("輸入的字串：%s\n\n", buf);
+    // 若輸入的字元超過 9，buf 也只會收到 9 個字元加上一個空字元，超過的字元會留在輸入緩衝區。
+    // 另一個預防輸入超過 buf 長度的方式，是使用 fgets，
+	// 可以參考〈putchar、getchar、puts、fgets〉的說明。
     
 	return 0;
 } 
