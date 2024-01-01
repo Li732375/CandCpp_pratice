@@ -11,7 +11,7 @@ int main(){
                           };
 
     printf("ROWS: %d\n", sizeof(maze) / sizeof(maze[0]));
-    printf("LEN: %d\n\n", sizeof(maze[0]) / sizeof(maze[0][0])); 
+    printf("LEN: %d\n\n", sizeof(maze[0]) / sizeof(maze[0][0]));
     
     printf("ROWS: %d\n", *(&maze + 1) - maze);
     printf("LEN: %d\n", *(&maze[0] + 1) - maze[0]);
