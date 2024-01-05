@@ -35,7 +35,7 @@ int main(){
     return 0;
 }
 
-// How to use (in this example)?
+// How to use or compiler (in this example)?
 
 // 1.
 // in terminal, input command "gcc math.c FunctionABC.c".
