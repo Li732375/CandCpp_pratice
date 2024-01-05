@@ -4,17 +4,17 @@
 const char *orderMax(const char *str_1, const char *str_2); // [Note] previous implicit declaration of 'orderMax' was here
 
 int main(){
-	// ¤ñ¸û¦r¦ê str1 »P str2 ªº¤j¤p
+	// æ¯”è¼ƒå­—ä¸² str1 èˆ‡ str2 çš„å¤§å°
 	
-	// ­Y¬Û¦P´N¶Ç¦^ 0¡Astr1 ¤j©ó str2 «h¶Ç¦^¤j©ó 0 ªº­È¡A
-	// ¤p©ó«h¶Ç¦^¤p©ó 0 ªº­È¡A¤ñ¸ûªº¼Ğ·Ç¬O¨Ì¦r¨å¶¶§Ç¡A¨Ò
-	// ¦p­Y str1 ¤j©ó str2¡Aªí¥Ü str1 ¦b¦r¨å¤¤ªº¶¶§Ç¬O¦b
-	//  str2 ¤§«á¡C
+	// è‹¥ç›¸åŒå°±å‚³å› 0ï¼Œstr1 å¤§æ–¼ str2 å‰‡å‚³å›å¤§æ–¼ 0 çš„å€¼ï¼Œ
+	// å°æ–¼å‰‡å‚³å›å°æ–¼ 0 çš„å€¼ï¼Œæ¯”è¼ƒçš„æ¨™æº–æ˜¯ä¾å­—å…¸é †åºï¼Œä¾‹
+	// å¦‚è‹¥ str1 å¤§æ–¼ str2ï¼Œè¡¨ç¤º str1 åœ¨å­—å…¸ä¸­çš„é †åºæ˜¯åœ¨
+	//  str2 ä¹‹å¾Œã€‚
 	char a[4] = "aaa", b[4] = "baa";
 	
-	printf("³]­È char a[4] = \"aaa\", b[4] = \"baa\"\n");
-	printf("°}¦C a »P b ¶¶§Ç½Ö¸û¤j?\n");
-	printf("µª®×¬O %s\n", orderMax(a, b)); // strcmp ¿é¥X¬°¾ã¼Æ«¬ºA 
+	printf("è¨­å€¼ char a[4] = \"aaa\", b[4] = \"baa\"\n");
+	printf("é™£åˆ— a èˆ‡ b é †åºèª°è¼ƒå¤§?\n");
+	printf("ç­”æ¡ˆæ˜¯ %s\n", orderMax(a, b)); // strcmp è¼¸å‡ºç‚ºæ•´æ•¸å‹æ…‹ 
 	
 	return 0;
 }

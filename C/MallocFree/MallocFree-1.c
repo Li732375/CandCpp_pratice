@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 int main(){
-	// ­Y­n°ÊºA°t¸m³sÄòªÅ¶¡¡A¨Ã·í¦¨¤Gºû°}¦C¨Ó¾Þ§@¡A
-	// °O±o¤Gºû¡]©Î¦hºû¡^°}¦C¡A´N¬O¥H°}¦Cªº°}¦C¨Ó¹ê
-	// §@¡C
+	// è‹¥è¦å‹•æ…‹é…ç½®é€£çºŒç©ºé–“ï¼Œä¸¦ç•¶æˆäºŒç¶­é™£åˆ—ä¾†æ“ä½œï¼Œ
+	// è¨˜å¾—äºŒç¶­ï¼ˆæˆ–å¤šç¶­ï¼‰é™£åˆ—ï¼Œå°±æ˜¯ä»¥é™£åˆ—çš„é™£åˆ—ä¾†å¯¦
+	// ä½œã€‚
 	int **arr = calloc(2, sizeof(int*));
 
-	// ²{¦b arr[0]¡Barr[1] ¥i¥H¤À§OÀx¦s°ÊºA°t¸m int* ªÅ¶¡ªº¦ì§}¡A
-	// ­Y¨C¬q­n¼ÒÀÀªº¤@ºû°}¦Cªºªø«×¬O 3 (°}¦C¤¸¯À­Ó¼Æ)¡A¥i¥H¦p¤U°Ê
-    // ºA°t¸m¡A¨Ã±N¼ÒÀÀªº¤@ºû°}¦C¨C­Ó¤¸¯Àªì©l³]¬° 0¡C
+	// ç¾åœ¨ arr[0]ã€arr[1] å¯ä»¥åˆ†åˆ¥å„²å­˜å‹•æ…‹é…ç½® int* ç©ºé–“çš„ä½å€ï¼Œ
+	// è‹¥æ¯æ®µè¦æ¨¡æ“¬çš„ä¸€ç¶­é™£åˆ—çš„é•·åº¦æ˜¯ 3 (é™£åˆ—å…ƒç´ å€‹æ•¸)ï¼Œå¯ä»¥å¦‚ä¸‹å‹•
+    // æ…‹é…ç½®ï¼Œä¸¦å°‡æ¨¡æ“¬çš„ä¸€ç¶­é™£åˆ—æ¯å€‹å…ƒç´ åˆå§‹è¨­ç‚º 0ã€‚
 	for(int i = 0; i < 2; i++) {
     	arr[i] = calloc(3, sizeof(int));
 	}

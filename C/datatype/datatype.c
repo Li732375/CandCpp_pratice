@@ -4,25 +4,25 @@
 #include <stdbool.h>
 
 int main(){
-	printf("���A�j�p\t\t(bytes)\n"); //�]\t�^���@�� tab �ĪG�C 
+	printf("型態大小\t\t(bytes)\n"); //（\t）為一次 tab 效果。 
 	
-	printf("short\t\t\t%lu\n", sizeof(short)); //�]sizeof()�^��ܦ��Ϊ��O����A��쬰 bytes�C 
-	// %lu ���榡���w�X�A���ܸӦ�m�N��m�@�� long unsigned ���A����ơA
-	// �]�N�O�� sizeof() �ҭp��X�Ӫ��Ʀr���N�C 
-	// �Y %lu ���i�ΡA�Ȯɱĥ� %d�C 
+	printf("short\t\t\t%lu\n", sizeof(short)); //（sizeof()）顯示佔用的記憶體，單位為 bytes。 
+	// %lu 為格式指定碼，表示該位置將放置一個 long unsigned 型態的整數，
+	// 也就是由 sizeof() 所計算出來的數字取代。 
+	// 若 %lu 不可用，暫時採用 %d。 
 	
 	printf("int\t\t\t%lu\n", sizeof(int)); 
 	printf("long\t\t\t%lu\n", sizeof(long));
-	// �b���P�sĶ���W�A�t�m���O������רä������ۦP�A�G�e�Ǥj�p�]���P�C 
+	// 在不同編譯器上，配置的記憶體長度並不完全相同，故容納大小也不同。 
 	
-	// �b 64 �줸 Ubuntu 16.04 ���� gcc �sĶ���U�Aint �P long �� 8 �줸�աA
-	// �b Windows 10 �ϥ� MinGW-w64�AGNU �sĶ�������O 8.1.0 ���A���ܡA
-	// int �P long �� 4 �줸�աA���׶V���A���ܥi���ܪ���ƭȽd��V�j�C
+	// 在 64 位元 Ubuntu 16.04 中的 gcc 編譯器下，int 與 long 為 8 位元組，
+	// 在 Windows 10 使用 MinGW-w64，GNU 編譯器版本是 8.1.0 型態的話，
+	// int 與 long 為 4 位元組，長度越長，表示可表示的整數值範圍越大。
 	
 	printf("unsigned int\t\t%lu\n\n", sizeof(unsigned int));
-	// �i�H�ϥ� signed�Bunsigned �ŧi�����B�L����ơA�L����Ƴ̥���줸����
-	// �Ӫ��ܥ��t���A�Ҧp�@�� 8 �줸�r���Q�ΨӪ��ܾ�ƮɡA�i�H���ܼƭ� -128
-	// �� 127�A�Ӥ@�ӵL���r���i�H���� 0 �� 255 ������ơC
+	// 可以使用 signed、unsigned 宣告有號、無號整數，無號整數最左邊位元不用
+	// 來表示正負號，例如一個 8 位元字元被用來表示整數時，可以表示數值 -128
+	// 到 127，而一個無號字元可以表示 0 到 255 的正整數。
 	
 	printf("float\t\t\t%lu\n", sizeof(float));
 	printf("double\t\t\t%lu\n", sizeof(double));
@@ -30,13 +30,13 @@ int main(){
 	printf("char\t\t\t%lu\n\n", sizeof(char));
 	
 	printf("bool\t\t\t%lu\n", sizeof(bool));
-	// ���ѱ��� 4 �� #include <stdbool.h> ��A�o�̱N���i���� 
+	// 註解掉行 4 的 #include <stdbool.h> 後，這裡將不可執行 
 	// [Error] 'bool' undeclared (first use in this function)
 	
-	// C �y���@�}�l�èS�����L�ȫ��A�A�ӬO�N�s�ȩ� NULL ���������ߡA
-	// ��L�ȳ��O���ߡAC99 �� bool �W�١A�w�q�� stdbool.h�A�ΨӪ���
-	// ���L�ơA�O C99 ���L���A _Bool �������]�]�N�O�|�sĶ��|�i�}��
-	//  _Bool�^�A�b�{�������@�Ӧ줸�աC 
+	// C 語言一開始並沒有布林值型態，而是將零值或 NULL 視為不成立，
+	// 其他值都是成立，C99 有 bool 名稱，定義於 stdbool.h，用來表示
+	// 布林數，是 C99 布林型態 _Bool 的巨集（也就是會編譯後會展開為
+	//  _Bool），在程式中佔一個位元組。 
 	
 	
 	return 0;

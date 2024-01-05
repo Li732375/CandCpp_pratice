@@ -3,68 +3,68 @@
 #include <stdlib.h>
 
 int main(){
-	// �ܼƫإ߫�|�t�m�O����Ŷ��A�o���귽�O�t�m�b�O���骺���|�ϡ]Stack�^�A
-	// �ͩR�g���]����禡��������A�]�N�O�禡����L��A�t�m���Ŷ��N�|�۰ʲM���C
+	// 變數建立後會配置記憶體空間，這類資源是配置在記憶體的堆疊區（Stack），
+	// 生命週期侷限於函式執行期間，也就是函式執行過後，配置的空間就會自動清除。
 	
-	// �Y�n�N�禡���浲�G�Ǧ^�A���ઽ���Ǧ^�o���Q�۰ʰt�m�Ŷ�����}�A�]���禡
-	// ����L��A�ӪŶ��N�|���X�A�禡�I�s�̫���Y�z�L��}���γo�Ǹ귽�A�|�o��
-	// ���i�w�������G�C�p�A���ઽ���N�ϰ�إߪ��ܼƦ�}�ΰ}�C��}�Ǧ^�C
+	// 若要將函式執行結果傳回，不能直接傳回這類被自動配置空間的位址，因為函式
+	// 執行過後，該空間就會釋出，函式呼叫者後續若透過位址取用這些資源，會發生
+	// 不可預期的結果。如，不能直接將區域建立的變數位址或陣列位址傳回。
 
-	// �}�o�̱o�ۦ�b�ݭn���ɭ԰t�m�O����A�o�ǰO����|�Q�t�m�b��n�ϡ]Heap�^�A
-	// ���|�۰ʲM���A�}�o�̱o�b���ϥθ귽�ɦۦ�����O����C
+	// 開發者得自行在需要的時候配置記憶體，這些記憶體會被配置在堆積區（Heap），
+	// 不會自動清除，開發者得在不使用資源時自行釋放記憶體。
 
-	// C �i�H�ϥ� malloc�A���w�q�b stdlib.h�A�|�Ҩӻ��A
-	// �i�H�b�{�����H�ʺA�覡�t�m�@�� int ���A�j�p���O����C
+	// C 可以使用 malloc，它定義在 stdlib.h，舉例來說，
+	// 可以在程式中以動態方式配置一個 int 型態大小的記憶體。
 
-	// malloc �|�t�m�@�� int �ݭn���Ŷ��A�öǦ^�ӪŶ�����}�A
-	// �i�H�ϥΫ��� p ���x�s��}�C
+	// malloc 會配置一個 int 需要的空間，並傳回該空間的位址，
+	// 可以使用指標 p 來儲存位址。
 	int *p = malloc(sizeof(int));
 
-	// �N C11 �W�d�ӻ��Amalloc �u�t�m�Ŷ�������l�Ŷ����ȡA
-	// �Y�n�b�t�m������w�]�����A���s�ȡA�i�H�ϥ� calloc�C
+	// 就 C11 規範來說，malloc 只配置空間但不初始空間的值，
+	// 若要在配置完成後預設為型態的零值，可以使用 calloc。
 	int *p1 = calloc(1, sizeof(int));
 
 
 	int *p1 = malloc(100); // 100 bytes
 
-    printf("�Ŷ���}�G%p\n", p1);
-    printf("�x�s���ȡG%d\n", *p1);
+    printf("空間位址：%p\n", p1);
+    printf("儲存的值：%d\n", *p1);
 
     *p1 = 200; 
 
-    printf("�Ŷ���}�G%p\n", p1);
-    printf("�x�s���ȡG%d\n", *p1);
+    printf("空間位址：%p\n", p1);
+    printf("儲存的值：%d\n", *p1);
 
-	// �Y�n����O����A�i�H�ϥ� free �禡
+	// 若要釋放記憶體，可以使用 free 函式
     free(p1);
 
 
-	// �p�G�Q�t�m�s��ӫ��w���A���Ŷ�
-	// �ʺA�t�m�F 1000 �� int �j�p���Ŷ��A�öǦ^�Ŷ���
-	// �Ĥ@�Ӧ�}�A�t�m�᪺�Ŷ���ƬO������
-	int *p2 = malloc(sizeof(int) * 1000); // 1000 �Ӿ��
+	// 如果想配置連續個指定型態的空間
+	// 動態配置了 1000 個 int 大小的空間，並傳回空間的
+	// 第一個位址，配置後的空間資料是未知的
+	int *p2 = malloc(sizeof(int) * 1000); // 1000 個整數
 
-	// �t�m�᪺�Ŷ���ƬO�������A�ϥ� calloc ��
-	// �ŧi�Ŷ��t�m�A�C�� int �Ŷ��|�Q��l�Ƭ� 0�C
-	int *p2 = calloc(1000, sizeof(int)); // ��l�� 1000 �Ӿ�Ƭ� 0
+	// 配置後的空間資料是未知的，使用 calloc 來
+	// 宣告空間配置，每個 int 空間會被初始化為 0。
+	int *p2 = calloc(1000, sizeof(int)); // 初始化 1000 個整數為 0
 
 
-	// �N�ʺA�t�m�Ŷ��������}�C�Ӿާ@
+	// 將動態配置空間模擬為陣列來操作
 	int size = 0;
 
-    printf("��J��ư}�C����:");
+    printf("輸入整數陣列長度:");
     scanf("%d", &size);
 
     int *arr = malloc(size * sizeof(int));
 
-    printf("���w�����G\n");
+    printf("指定元素：\n");
 
     for(int i = 0; i < size; i++) {
         printf("arr[%d] = ", i);
         scanf("%d" , arr + i);
     }
 
-    printf("��ܤ����G\n");
+    printf("顯示元素：\n");
     for(int i = 0; i < size; i++) {
         printf("arr[%d] = %d\n", i, *(arr+i));
     }

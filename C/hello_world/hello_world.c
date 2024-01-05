@@ -1,16 +1,16 @@
-#include <stdio.h> // ¥¨¶°¡]Macro¡^«e¸m³B²z¾¹«ü¥O¡]Preprocessor directive¡^
-// §i¶D½sÄ¶¾¹¡]Compiler¡^³o­Óµ{¦¡·|¥Î¨ì stdio.h ³o­Ó¼ĞÀYÀÉ¡]Header file¡^
-// ©w¸qªº¨ç¦¡¡]Function¡^¡A¥H«K¥¿½T¦a½sÄ¶µ{¦¡¤¤¨Ï¥Î¨ìªºµ{¦¡®w¨ç¦¡
+#include <stdio.h> // å·¨é›†ï¼ˆMacroï¼‰å‰ç½®è™•ç†å™¨æŒ‡ä»¤ï¼ˆPreprocessor directiveï¼‰
+// å‘Šè¨´ç·¨è­¯å™¨ï¼ˆCompilerï¼‰é€™å€‹ç¨‹å¼æœƒç”¨åˆ° stdio.h é€™å€‹æ¨™é ­æª”ï¼ˆHeader fileï¼‰
+// å®šç¾©çš„å‡½å¼ï¼ˆFunctionï¼‰ï¼Œä»¥ä¾¿æ­£ç¢ºåœ°ç·¨è­¯ç¨‹å¼ä¸­ä½¿ç”¨åˆ°çš„ç¨‹å¼åº«å‡½å¼
 
-int main() // µ{¦¡ªº¶i¤JÂI¡]Entry point¡^
+int main() // ç¨‹å¼çš„é€²å…¥é»ï¼ˆEntry pointï¼‰
 {
-	printf("hello world¡I\n"); // ¨C¤@­Ó³¯­z¡]Statement¡^µ²§ô³£¥²¶·¨Ï¥Î¤À¸¹¡];¡^
+	printf("hello worldï¼\n"); // æ¯ä¸€å€‹é™³è¿°ï¼ˆStatementï¼‰çµæŸéƒ½å¿…é ˆä½¿ç”¨åˆ†è™Ÿï¼ˆ;ï¼‰
 	printf("hello ");
-	printf("world\n"); // ¥[¤J¡]\n¡^´«¦æ 
-	printf("¡I");
+	printf("world\n"); // åŠ å…¥ï¼ˆ\nï¼‰æ›è¡Œ 
+	printf("ï¼");
 	
-	printf("\"ªì¾Ç²ß C »y¨¥\"¡I"); // ¥[¤J¡]\"¡^ ¸õ²æÅã¥Ü 
+	printf("\"åˆå­¸ç¿’ C èªè¨€\"ï¼"); // åŠ å…¥ï¼ˆ\"ï¼‰ è·³è„«é¡¯ç¤º 
 	
 	return 0;
-	// ¦b C99/C11 ¤§«á¡A¦pªG¨S¦³¦b³Ì«á¼¶¼g return 0¡A¹w³]´N¬O¶Ç¦^ 0
+	// åœ¨ C99/C11 ä¹‹å¾Œï¼Œå¦‚æœæ²’æœ‰åœ¨æœ€å¾Œæ’°å¯« return 0ï¼Œé è¨­å°±æ˜¯å‚³å› 0
 } 

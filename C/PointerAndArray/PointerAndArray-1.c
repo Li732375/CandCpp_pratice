@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-	// °}¦C¯Á¤Ş¨ä¹ê¬O¬Û¹ï©ó­º¤¸¯À¦ì§}ªº¦ì²¾¶q¡C
+	// é™£åˆ—ç´¢å¼•å…¶å¯¦æ˜¯ç›¸å°æ–¼é¦–å…ƒç´ ä½å€çš„ä½ç§»é‡ã€‚
 	//int LEN = 10, arr2[LEN] = {0}; // [Error] variable-sized object may not be initialized
     int LEN = 10, arr2[LEN];
 	int *p = arr2;

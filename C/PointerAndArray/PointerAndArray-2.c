@@ -3,7 +3,7 @@
 int main(){
 	// 
 	
-	// C ¨S¦³¤Gºû°}¦C³oºØªF¦è¡A¤Gºû©Î¦hºû°}¦Cªº·§©À¡A¬O¥H°}¦Cªº°}¦C¡]arrays of arrays¡^¨Ó¹ê²{¡C
+	// C æ²’æœ‰äºŒç¶­é™£åˆ—é€™ç¨®æ±è¥¿ï¼ŒäºŒç¶­æˆ–å¤šç¶­é™£åˆ—çš„æ¦‚å¿µï¼Œæ˜¯ä»¥é™£åˆ—çš„é™£åˆ—ï¼ˆarrays of arraysï¼‰ä¾†å¯¦ç¾ã€‚
 	int ROWS = 3, LEN = 3;
 	int maze[ROWS][LEN] = {
                                 {1, 2, 3},
@@ -16,7 +16,7 @@ int main(){
     printf("ROWS: %d\n", *(&maze + 1) - maze);
     printf("LEN: %d\n", *(&maze[0] + 1) - maze[0]);
     
-    // ­Y¤£ºÞªø«×¸ê°T·|¥¢¥hªº°ÝÃD¡A¤]¥i¥H¦p¤U¼ÒÀÀ¤Gºû°}¦C
+    // è‹¥ä¸ç®¡é•·åº¦è³‡è¨Šæœƒå¤±åŽ»çš„å•é¡Œï¼Œä¹Ÿå¯ä»¥å¦‚ä¸‹æ¨¡æ“¬äºŒç¶­é™£åˆ—
     int row3[LEN] = {1, 2, 3};
     int row4[LEN] = {4, 5, 6};
     int* maze1[ROWS] = {row3, row4};
@@ -29,7 +29,7 @@ int main(){
         printf("\n");
     } 
     
-    // ¥Ü½d¤F¦p¦ó¨ú±o¤Gºû°}¦C¤¤ªº¨C¤@¦C¡A¨Ã«O¯dªø«×¸ê°T
+    // ç¤ºç¯„äº†å¦‚ä½•å–å¾—äºŒç¶­é™£åˆ—ä¸­çš„æ¯ä¸€åˆ—ï¼Œä¸¦ä¿ç•™é•·åº¦è³‡è¨Š
     int maze2[ROWS][LEN] = {
                               {1, 2, 3},
                               {4, 5, 6}
@@ -42,7 +42,7 @@ int main(){
         }
     printf("\n");
 	
-	// ­Y­n§¹¥þ°ò©ó«ü¼Ð¨Ó­¡¥N°}¦C¡A¦Ó¤£¨Ì¾a¯Á¤Þ
+	// è‹¥è¦å®Œå…¨åŸºæ–¼æŒ‡æ¨™ä¾†è¿­ä»£é™£åˆ—ï¼Œè€Œä¸ä¾é ç´¢å¼•
 	int maze3[ROWS][LEN] = {
                                 {1, 2, 3},
                                 {4, 5, 6}

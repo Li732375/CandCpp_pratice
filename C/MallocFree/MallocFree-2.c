@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main(){
-	// ¨C¬q¼ÒÀÀªº¤@ºû°}¦Cªø«×·íµM¥i¥H¤£¤@¼Ë
+	// æ¯æ®µæ¨¡æ“¬çš„ä¸€ç¶­é™£åˆ—é•·åº¦ç•¶ç„¶å¯ä»¥ä¸ä¸€æ¨£
     int **arr = calloc(2, sizeof(int*));
     arr[0] = calloc(3, sizeof(int));
     arr[1] = calloc(5, sizeof(int));
