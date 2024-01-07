@@ -16,7 +16,7 @@ typedef struct Account {
 // 以下的範例定義的結構型態為 struct <anonymous>，
 // 也就是匿名結構，並以 typedef 取這個匿名結構取了
 // 個別名。
-typedef struct {// 這裡的 Account 不見了 
+typedef struct {// 這裡的 "Account" 不見了 
     String id;
     String name;
     double balance;
