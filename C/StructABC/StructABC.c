@@ -6,18 +6,24 @@ typedef const char* String; // 定義結構的別名，後面範例會提及。
 // 有些資料會有相關性，相關聯的資料組織在一起，
 // 對於資料本身的可用性或者是程式碼的可讀性，都
 // 會有所幫助。
-struct Account { 
-    // 值域
-    String id; // 結構別名
-    String name; // 結構別名
+struct Account { // 後續皆採用 struct Account 作為新資料型態的宣告。
+    // 值域，每個變數（欄位）定義其實就是一個變數的宣告，不可包含初始值的給定。
+    String id;
+    String name;
     double balance;
 };
+
 // 也可以在函式中定義結構，直接宣告結構實例。
-//struct Account { 
-//    String id;
-//    String name;
-//    double balance;
-//} acct_1 = {"789-456-123", "Lin", 101};
+/*
+struct Account { 
+    String id;
+    String name;
+    double balance;
+} acct_1 = {"789-456-123", "Lin", 101}, 
+acct_2 = {"745-689-213", "Noton", 9};
+
+// 非 typedef 開頭，acct_1 and acct_2 為變數。
+*/
 
 void printAcct(struct Account acct) {
     printf("Account(%s, %s, %.2f)\n", acct.id, acct.name, acct.balance);
@@ -47,7 +53,7 @@ int main(void){
         {"789-654-321", "Monica Huang", 105} 
     };
 
-    // 顯示 Account(123-456-789, Justin Lin, 1000.000000)
+    // 顯示 Account(123-456-789, Justin Lin, 1000.00)
     printAcct(acct);
     // acct 在函式執行完畢後就會自動清除。
     printAcct(acct_1);

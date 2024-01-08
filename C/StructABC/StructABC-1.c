@@ -11,22 +11,24 @@ typedef struct Account {
     String id;
     String name;
     double balance;
-} Account; // 留意這裡也要補齊名稱。
+} Account; 
+// 近一步使用細節見 StructPoint.c。
 
 // 以下的範例定義的結構型態為 struct <anonymous>，
 // 也就是匿名結構，並以 typedef 取這個匿名結構取了
 // 個別名。
-typedef struct {// 這裡的 "Account" 不見了 
+/*
+typedef struct { // 這裡的 "Account" 不見了 
     String id;
     String name;
     double balance;
-} Account;
+} Account; // 有 typedef 開頭，為結構別名
+*/
 
 // 結構的名稱型態"無需"包含 struct 名稱。
 void printAcct(Account acct) {
     printf("Account(%s, %s, %.2f)\n", acct.id, acct.name, acct.balance);
 }
-
 
 int main(void){
     // 結構的名稱型態"無需"包含 struct 名稱。
@@ -45,8 +47,8 @@ int main(void){
 
     // 結構的名稱型態"無需"包含 struct 名稱。
     Account accts_3 [] = {
-        {"123-456-789", "Justin Lin", 1000}, 
-        {"789-654-321", "Monica Huang", 1000} 
+        {"183-452-769", "Justin Lin", 80}, 
+        {"789-654-321", "Monica Huang", 135} 
     };
 
     printAcct(acct);
