@@ -8,7 +8,7 @@ typedef struct { // 沒有寫 "Account" 無妨
     String id;
     String name;
     double balance;
-} Account; // // 有 typedef 開頭，為結構別名（可以的話，建議至少開頭大寫）
+} Account; // 有 typedef 開頭，為結構別名（可以的話，建議至少開頭大寫）
 
 // 寫法二
 /*
