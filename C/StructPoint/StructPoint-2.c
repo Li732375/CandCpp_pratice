@@ -4,11 +4,11 @@ typedef const char* String;
 
 // 結構中允許再定義結構
 typedef struct {  
-    struct {
+    struct { // 匿名結構
         String id;  
         String name; 
         double balance;
-    } acct; // 這裡有變數 acct，內部子變數需間接取得
+    } acct; // 這裡有結構別名 acct，內部子變數需間接取得
     double overdraftlimit;
 
 } CheckingAccount;
