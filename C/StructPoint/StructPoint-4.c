@@ -2,14 +2,15 @@
 
 typedef const char* String;
 
-typedef struct {  
+// 外包結構
+typedef struct { // 匿名結構
     String id;  
     String name; 
     double balance;
 } Account;
 
 // 結構中允許再滲入過去已定義的外包結構
-typedef struct {  
+typedef struct { // 匿名結構
     Account; // 上面已定義的結構，不需欄位名稱
     double overdraftlimit;
 } CheckingAccount;
