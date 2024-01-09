@@ -8,7 +8,7 @@ typedef struct {
         String id;  
         String name; 
         double balance;
-    }; // 這裡沒有變數，內部子變數就可以直接取得
+    }; // 這裡沒有別名，內部子變數就可以直接取得
     double overdraftlimit;
 
 } CheckingAccount;
