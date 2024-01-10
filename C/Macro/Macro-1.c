@@ -7,7 +7,9 @@
 #define pow_1(a) (a) * (a)
 
 int main(void) {
+    // 實際展開後內容，詳見同名的 .i 檔的最底
     int x = 10;
+
     printf("%d\n", pow(x));     
     printf("%d\n", pow(x + x)); // 預期結果應該是 400，實際上顯示會是 120。
     // 因為展開後會是 x + x * x + x。
