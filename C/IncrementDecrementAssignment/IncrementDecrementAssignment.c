@@ -10,20 +10,22 @@ int main(void){
     int i = 0;
     int num = 0;
 
+    printf("\nnum\t i\n");
+
     num = ++i;   // 相當於i = i + 1; num = i;
-    printf("%d\n", num);
+    printf("%2d\t%2d\n", num, i);
 
     i = 0;
     num = --i;    // 相當於i = i - 1; num = i;
-    printf("%d\n", num);
+    printf("%2d\t%2d\n", num, i);
 
     i = 0;
     num = i++;    // 相當於num = i; i = i + 1;
-    printf("%d\n", num);
+    printf("%2d\t%2d\n", num, i);
 
     i = 0;
     num = i--;     // 相當於 num = i; i = i - 1;
-    printf("%d\n", num);
+    printf("%2d\t%2d\n", num, i);
 
     // 指定運算子（Assignment operator），到目前為止我們只看過一個指定運算子，
     // 也就是=這個運算子，事實上指定運算子還有以下的幾個：
