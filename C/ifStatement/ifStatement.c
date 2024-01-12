@@ -1,13 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-    int input = 0;
-    int remain = 0;
-
-    printf("輸入整數：");
-    scanf("%d", &input);
-
-    remain = input % 2;
     // 當條件式成立時（真），則執行陳述句一，
     // 要不然就執行陳述句二；如果條件式不成立
     // 時並不想作任何事，則 else 可以省略。
@@ -37,7 +30,14 @@ int main(void) {
         陳述句四; 
     }
     */
-   
+    int input = 0;
+    int remain = 0;
+
+    printf("輸入整數：");
+    scanf("%d", &input);
+
+    remain = input % 2;
+
     if(remain == 1) {
         printf("%d 為奇數\n", input);
     }
