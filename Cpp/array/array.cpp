@@ -1,6 +1,6 @@
 #include <iostream>
 
-// 這裡的 array 隸屬於類別（class template），用法與原生 array 幾乎相仿
+// 這裡的 array 隸屬於類別（class template），概念與原生 array 大致相仿，但用法有別。
 #include <array>
 using namespace std;
 
@@ -10,7 +10,7 @@ int main() {
     array<int, 3> id = {0};    // 全部初始為 0
 
     // for range 語法
-    for(auto n : number) {
+    for(int n : number) {
         cout << n << " ";
     }
     cout << "\n";
@@ -36,10 +36,9 @@ int main() {
     for(auto n : number) {
         cout << n << " ";
     }
-
     cout << "\n\n";
 
-    array<int, 3> a1(number);
+    array<int, 3> a1(number); // number -> a1
 
     cout << "a1\n";
     for(auto n : a1){
