@@ -28,8 +28,8 @@ int main() {
     // 以使用。
 
     // C++ 11 提供了 begin 與 end 函式，begin 會傳回陣列首個元素的位址，
-    // end 傳回最後一個元素下個位置的位址，當對位址值進行運算時，會以資料
-    // 型態的長度偏移。
+    // end 傳回最後一個元素的位址，當對位址值進行運算時，會以資料型態的長
+    // 度偏移。
     for(auto offset = begin(number); offset != end(number); offset++) {
         // offset 是個指標（pointer），型態會是 int*，
         // 儲存的是位址，而 *offset 是取得儲存於該位址
