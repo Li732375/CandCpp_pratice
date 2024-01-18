@@ -27,7 +27,6 @@ int main() {
     int *p3 = const_cast<int*>(&n1); 
     cout << "*p3 " << *p3 << "\n";
 
-
     // 要留意的是，const int *p 宣告的 p 並不是常數，可以儲存不同的位址。
     const int m = 20;
 

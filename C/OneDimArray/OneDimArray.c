@@ -43,10 +43,16 @@ int main(){
 	printf("指定首個元素（score_a[0]）為 %.2lf\n", score_a[0]);
 	printf("指定首個元素（ascii_a[0]）為 %c\n", ascii_a[0]);
 	
-	// 陣列名稱就指向陣列記憶體的第一個位置的位址，而索引值表示所指定的陣列元素，
-	// 相對於陣列第一個記憶體位置的位移量（Offset）。 
+	// 對陣列名稱取單一元素值時會指向該陣列的第一個位置的位址
+	// （但實際上仍涵蓋整個陣列的區段），而索引值表示所指定的
+	// 陣列元素，相對於陣列第一個記憶體位置的位移量（Offset）。 
 	int number_b[5] = {0, 1, 2, 3, 4};
     int length = sizeof(number_b) / sizeof(number_b[0]);
+	// 透過陣列變數會取得首元素的位址，將陣列變數指定給指標 p，
+	// 就只是取得首元素位址並儲存在 p，如果將 p 傳給 sizeof，
+	// 那使用的會是指標 p 的型態，而不是原陣列的型態，這會令
+	// sizeof()、以及神奇計算長度的方式（*(&arr + 1) - arr）
+	// 失效。
 	
 	//for(int i = 0; i < length; i++){...} // [Error] 'for' loop initial declarations are only allowed in C99 or C11 mode
     int i = 0;
