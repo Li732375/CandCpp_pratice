@@ -6,9 +6,10 @@ using namespace std;
 void printArray(const char *Name, const int *p_array, int size_array){
     cout << Name << " ";
 
-    // 因此處的變數皆另外複製的，即便是採用指標，
-    // 也不過是另立一個指向陣列首個元素的新連結，
-    // 不能執行一些原先變數本身的操作。
+    // 因此處的參數皆另外複製的，即便是採用指標，
+    // 也不過是另立一個僅有指向陣列首個元素的新連結，
+    // 不能執行一些原先變數本身的操作（如長度、begin() 
+    // or end()、for range...等）。
 
     // 這裡的 size_array 不可替換成 *(&array) - array
     for(int i = 0; i < size_array; i++) { 
