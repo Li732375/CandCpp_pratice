@@ -40,7 +40,7 @@ int main(void){
     
     // lvalue、rvalue 是 C++ 對運算式（expression）的分類方式，
     // 一個粗略的判別方式，是看看 & 可否對運算式取址，若可以的話，
-    // 運算式是 lvalue，否則是個 rvalue。
+    // 運算式是 lvalue（&），否則是個 rvalue（&&）。
 
     // 那麼 ++i、i++ 呢？
     int i = 10;
