@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(void){
-    // 
+    // 宣告字串
     string str1;                 // 內容為空字串
     string str2("caterpillar");  // 內容為指定的字串常量
     string str3(str2);           // 以 str1 實例建立字串
@@ -24,7 +24,7 @@ int main(void){
 
     // 使用 == 比較兩個字串的內容是否相同。
     cout << "str1 與 str2 內容是否相同：" << (str1 == str2) << endl; 
-    cout << "str2 與 str3 內容是否相同：" << (str3 == str3) << endl;
+    cout << "str2 與 str3 內容是否相同：" << (str2 == str3) << endl;
 
     // 將字串指定給另一個字串
 
@@ -33,30 +33,34 @@ int main(void){
     cout << "str5 " << str5 << "\n";
 
     // 將一個 C 風格的字串指定給 string。
-    string name = "caterpillar";
     char str[] = "Justin";
+    string name = "caterpillar";
     name = str;
 
     // 但不能將一個 string 實例指定給字元陣列。
-    char str[] = "Justin";
-    string name = "caterpillar";
-    //str = name; // error
+    char str6[] = "Justin";
+    string name2 = "caterpillar";
+    //str6 = name2; // error
 
     // 使用 + 運算子來串接字串。
     str1 = str1 + str2;
     str1 = str1 + "Wulala";
 
     // 可以使用 [] 指定索引來存取相對應位置的 char，就有如字元陣列的操作。
-    string name = "findWorkMan";
+    string name3 = "findWorkMan";
 
-    for(int i = 0; i < name.length(); i++) {
-        cout << name[i] << "\n";
+    cout << "name3 ";
+    for(int i = 0; i < name3.length(); i++) {
+        cout << name3[i] << " ";
     }
+    cout << "\n";
 
     // 循序走訪
-    for(auto ch : name) {
-        cout << ch << endl;
+    cout << "name3 ";
+    for(auto ch : name3) {
+        cout << ch << " ";
     }
+    cout << "\n";
 
     return 0;
 }
