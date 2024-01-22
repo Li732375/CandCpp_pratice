@@ -53,10 +53,10 @@ void printAll_3(T (&arr)[L]) {
 // 其實還可以再改成
 template <typename T>
 void printAll_3(T &arr) { // 拿掉[L]
-   for(auto elem : arr) {
-       cout << elem << " ";
-   }
-   cout << endl;
+    for(auto elem : arr) {
+        cout << elem << " ";
+    }
+    cout << endl;
 }
 
 int main() { 
