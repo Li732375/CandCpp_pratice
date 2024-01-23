@@ -13,10 +13,12 @@ int main() {
     /*
     // lambda 運算式的定義方式:
     [ captures ] ( params ) -> ret { body }
+    [ captures ] ( params ) { body }
+    [ captures ] { body }
     
     // 開頭的 [] 稱為 Capture Clause，來表示 Lambda 的定義開始。
     // 有抓取（capture）變數的功能，指定該如何將目前 scope 範圍之
-    // 變數抓取至 lambda expression 中使用。
+    // 變數抓取至 lambda expression 中使用，不可省略。
 
     // () 稱為 lambda declarator，等於函數的參數列，
     // 定義此匿名函數的傳入參數。如果不需要傳入任何參
@@ -30,7 +32,7 @@ int main() {
     // 或是根本沒有傳回值的話，這部分就可以直接省略，讓編
     // 譯器自行判斷傳回值的型別。
 
-    // {} 即 Lambda 的實作。
+    // {} 內即 Lambda 的實作。
 
     // Capture Clause 抓取變數的方式則分為傳值（by value）
     // 與傳參考（by reference）兩種，跟一般函數參數的傳入方式類似。
@@ -45,15 +47,18 @@ int main() {
 
     // lambda 運算式的本體若有 return，然而沒有定義 ret 的型態時，
     // 會自動推斷，因此上例 f1 的 ret 型態會自動推斷為 int
-
-    [ captures ] ( params ) { body }
-    [ captures ] { body }
-    // 例 
     */
 
-    //  [capture] 在只定義為 [] 時，沒辦法使用任何 lambda 運算式外部的變數，
-    // 若想運用外部變數，定義時基本上從 = 與 & 出發。
+    // [capture] 在只定義為 [] 時，沒辦法使用任何 lambda 運算式外部的變數，
+    // 例 1
+    auto lambda = []() { cout << "Hello, Lambda\n" << endl; };
+    lambda();
 
+    // 例 2
+    int n = [] (int x, int y) { return x + y; }(5, 4);
+    cout << n << "\n" << endl;
+
+    // 若想運用外部變數，定義時基本上從 = 與 & 出發。
     // [=]：lambda 運算式本體可以取用外部變數。
     // [&]：lambda 運算式本體可以參考外部變數。
 
