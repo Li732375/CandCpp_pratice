@@ -4,7 +4,7 @@
 using namespace std;
 
 // :: 是類別範圍解析（class scope resolution）運算子，
-// 在實作類別建構式或方法（method）時，在 ::前指明實作
+// 在實作類別建構式或方法（method）時，在 :: 前指明實作
 // 哪類別之定義。
 Account::Account(string id, string name, double balance) {
     // 在建構式（constructor）或方法的實作中，若要存取實例本身，
