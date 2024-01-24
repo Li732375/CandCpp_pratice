@@ -7,20 +7,20 @@ using namespace std;
 // 個權限可見的修飾詞出現前（例如 public、private），定義的成員預
 // 設會是公開可存取，而後者預設會是私有（也就是 private）。
 class Account { 
-private: 
-    // 值域（field）
-    string id;  
-    string name; 
-    double balance;
+    private: 
+        // 值域（field）
+        string id;  
+        string name; 
+        double balance;
 
-public: 
-    // 值域（field）
+    public: 
+        // 值域（field）
 
-    // 如果沒有定義任何建構式，編譯器會自動產生沒有參數的預設建構式，
-    // 如果自定義了建構式，就是類別內初始式（in-class initializer），
-    // 就會使用你定義的建構式。
-    Account(string id, string name, double balance); // 建構式，初始 Account 值域。
-    void deposit(double amount);
-    void withdraw(double amount);
-    string to_string();
+        // 如果沒有定義任何建構式，編譯器會自動產生沒有參數的預設建構式，
+        // 如果自定義了建構式，就是類別內初始式（in-class initializer），
+        // 就會使用你定義的建構式。
+        Account(string id, string name, double balance); // 建構式，初始 Account 值域。
+        void deposit(double amount);
+        void withdraw(double amount);
+        string to_string();
 };
