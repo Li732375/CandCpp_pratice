@@ -18,7 +18,7 @@ string Account::to_string() {
     return string("Account(") + 
            this->id + ", " +
            this->name + ", " +
-           std::to_string(this->balance) + ")"; // 
+           std::to_string(this->balance) + ")";
 }
 
 void Account::deposit(double amount) {

@@ -12,6 +12,7 @@ class Account {
         string id;  
         string name; 
         double balance;
+        // 以上的變數，在函式裡通通要用 this-> 變數名稱 的方式存取。
 
     public: 
         // 值域（field）
