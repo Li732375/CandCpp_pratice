@@ -8,6 +8,7 @@ int main() {
     const string text = "Justin";
     //text.append(" Lin") // error: no matching function
     
+    // 雖然 to_string 並沒有變動實例狀態，也不能通過編譯。
     const Account acct = {"123-456-789", "Justin Lin", 1000};
     //cout << acct.to_string() << endl; // error: passing 'const Account' as 'this' argument discards qualifiers
 

@@ -3,6 +3,10 @@
 using namespace std;
 
 // 運算子重載是函式重載的延伸應用，定義類別時可以指定重載哪個運算子，實作對應的運算。
+// 僅可以重載現有的運算子，不能自行定義額外的運算子。
+// 對於內建的資料型態的運算方式不可改變。
+// 運算順序與方向不可改變。
+// 運算元個數也不可改變。
 class Rational {
     int numer;
     int denom;
@@ -10,10 +14,13 @@ class Rational {
     public:
         Rational(int numer, int denom) : numer(numer), denom(denom) {}
 
-        Rational operator+(const Rational&); // 參數表示運算元右方的變數（類別也需相符）
+        // 雙重運算元
+        Rational operator+(const Rational&); // 參數表示運算元右方的物件（相符類別或資料型態的變數）
         Rational operator-(const Rational&);
         Rational operator*(const Rational&);
         Rational operator/(const Rational&);
+
+        // 單一運算元
         Rational& operator++(); // 前置，例如 ++x
         Rational& operator--(); // 前置，例如 --x
         Rational operator++(int); // 後置，例如 x++

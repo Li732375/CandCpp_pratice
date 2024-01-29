@@ -3,7 +3,7 @@ using namespace std;
 
 struct IntPlus {
     // 呼叫函式時的 () 即是呼叫運算子（call operator），可以重載呼叫運算子。
-    int operator()(int rhs, int lhs) const {
+    int operator()(int rhs, int lhs) const { // const 是確保實例不變動，即便呼叫的方法實際上並沒有。
         return rhs + lhs;
     }
 };

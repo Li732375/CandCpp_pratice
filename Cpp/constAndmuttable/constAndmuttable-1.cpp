@@ -4,8 +4,7 @@
 
 int main() { 
     // const 修飾表示不能變動實例狀態，這並不是自動發生的事情，
-    // 如果呼叫的方法沒有被 const 修飾，就不能通過編譯。
-    
+    // 如果呼叫的方法沒有被 const 修飾，會不能通過編譯。
     const Account acct = {"123-456-789", "Justin Lin", 1000};
     cout << acct.to_string() << endl;
 
