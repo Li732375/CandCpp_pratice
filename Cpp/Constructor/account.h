@@ -14,8 +14,12 @@ class Account {
         // 如果建構式中想要指定某個值域的值，可以定義
         // 初始式清單（constructor initializer list），
         // 直接在定義類別時撰寫。
+
+        // 建構式（Constructor）
         Account(string id, string name, double balance):
             id(id), name(name), balance(balance) {};
+        // 不可以有返回型別。
+
         // id 值域就會用參數 id 的值初始化，name 值域就會用參數 name 的值初始化，
         // balance 值域就會用參數 balance 的值初始化，括號中指定不一定要是參數，
         // 也可以是運算式，如果初始式清單省略了某個值域，那就會使用預設初始化。

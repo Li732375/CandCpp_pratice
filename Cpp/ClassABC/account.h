@@ -17,10 +17,12 @@ class Account {
     public: 
         // 值域（field）
 
-        // 如果沒有定義任何建構式，編譯器會自動產生沒有參數的預設建構式，
+        // 如果沒有定義任何建構式，編譯器會自動產生沒有參數的預設建構式（且未初始化數值），
         // 如果自定義了建構式，就是類別內初始式（in-class initializer），
         // 會優先採用你定義的建構式。
         Account(string id, string name, double balance); // 建構式，初始 Account 值域。
+        // 建構式不會有回傳型態。
+
         void deposit(double amount);
         void withdraw(double amount);
         string to_string();
