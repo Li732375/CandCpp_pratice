@@ -14,8 +14,8 @@ class Rational {
     public:
         Rational(int numer, int denom) : numer(numer), denom(denom) {}
 
-        // 雙重運算元
-        Rational operator+(const Rational&); // 參數表示運算元右方的物件（相符類別或資料型態的變數）
+        // 兩元運算
+        Rational operator+(const Rational&); // 參數表示運算元右方的物件（相符類別或型別的變數）
         Rational operator-(const Rational&);
         Rational operator*(const Rational&);
         Rational operator/(const Rational&);
