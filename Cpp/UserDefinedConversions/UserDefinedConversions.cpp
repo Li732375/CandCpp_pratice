@@ -20,11 +20,11 @@ class Rational {
 
         // 允許編譯器隱含地完成型態轉換。
         operator double() {
-            return static_cast<double>(this->numer) / this->denom;
+            return static_cast<double>(this->numer) / this->denom; // static_cast 指定轉型
         }
 
         operator Double() {
-            return Double(static_cast<double>(this->numer) / this->denom);
+            return Double(static_cast<double>(this->numer) / this->denom);  // static_cast 指定轉型
         }
 };
 

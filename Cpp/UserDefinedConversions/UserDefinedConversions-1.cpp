@@ -16,11 +16,11 @@ class Rational {
 
         // 如果型態轉換必須得明確，可以加上 explicit。
         explicit operator double() {
-            return static_cast<double>(this->numer) / this->denom;
+            return static_cast<double>(this->numer) / this->denom; // static_cast 指定轉型
         }
 
         explicit operator Double() {
-            return Double(static_cast<double>(this->numer) / this->denom);
+            return Double(static_cast<double>(this->numer) / this->denom); // static_cast 指定轉型
         }
 };
 
