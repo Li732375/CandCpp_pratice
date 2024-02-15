@@ -20,7 +20,7 @@ int main() {
         .overdraftlimit = 30000
     };
 
-    printf("%s\n", checking.id); // 要透過變數 acct 一層才能取得
+    printf("%s\n", checking.id); // 不需透過一層變數取得
     printf("%s\n", checking.name);
     printf("%f\n", checking.balance);
     printf("%.2f\n\n", checking.overdraftlimit);
