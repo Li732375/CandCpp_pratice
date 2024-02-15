@@ -9,6 +9,7 @@ typedef struct {
         String name; 
         double balance;
     } acct; // 這裡有結構別名 acct，內部子變數需間接取得
+    
     double overdraftlimit;
 
 } CheckingAccount;
